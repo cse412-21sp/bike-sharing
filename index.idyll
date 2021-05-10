@@ -2,12 +2,12 @@
 
 [Header
   fullWidth:true
-  title:"CSE412 Final Project Template"
-  subtitle:"Use this structure to get started, but make the narrative your own!"
-  author:"Jane Hoffswell"
+  title:"Bike Sharing in DC"
+  subtitle:"exploring bike sharing data from the last decade"
+  author:"Our Names"
   authorLink: "
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
-  date:"Apr 6, 2021"
+  date:"May 10, 2021"
   background:"#33333f"
   color:"#ffffff"
    /]
