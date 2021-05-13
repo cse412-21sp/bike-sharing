@@ -1,7 +1,6 @@
 
 body {
   margin: 0;
-  background: #1f2833;
 }
 
 .idyll-root {
@@ -221,10 +220,9 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
-  color: #ffffff;
+  color: #24292e;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
-  font-weight: lighter;
   line-height: 1.5;
   word-wrap: break-word;
 }
