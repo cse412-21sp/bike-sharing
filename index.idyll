@@ -12,17 +12,33 @@
   color:"#ffffff"
    /]
 
-The final project will provide hands-on experience designing, implementing, and deploying interactive visualizations for the web. For this project, you will select a topic of interest and author a narrative article and accompanying visualizations to educate and inform a general audience. Think of your project as contributing to our own class newspaper or scientific magazine. The final deliverable will take the form of an explanatory narrative, deployed as an interactive web page using GitHub Pages. You will leverage the template and style provided here.
+Over the last 10 years bike sharing has become more and more popular in big cities, specifically DC. The use of these bikes has immediate and long term benefits due to the decreased use of automobile transportation, which reduces emissions and helps eliminate traffic from city streets. By exploring several datasets regarding the use of these bikes, we hope to gain more insight into when and where they are most used. Through these findings, decisions can be made on where to best place  bikes and what other cities would most benefit from the introduction of the bike share system. We plan to create a geographical mapping of the trips being taken in order to give viewers a good sense of which stations are the most popular starting points and destinations. We also plan on making animated time series charts showing the monthly and yearly trends in overall usage, and pairing these trends with weather data
 
-This paragraph is brought to you by Nat.
+[var name:"myLocation" value:0 /]
 
-## The theme is data visualization for communicating scientific advancements or social phenomena. How might data visualization help us better understand the workings of our society or our physical world?
+[Scroller className:"hasBackground" currentStep:myLocation]
 
-Your project must visualize one or more publicly accessible datasets of social or scientific importance. You are free to choose a specific domain of personal interest; for example, you might explore data relevant to your UW major. Example topics include transportation, economic development, humanitarian aid, legislative voting records, and communicating scientific research, among many others. Talk to the course staff if you have any questions regarding the project theme.
+  [Graphic className:"d3-component-container"]
+    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
+  [/Graphic]
 
-This template was created with [Idyll](https://idyll-lang.org/docs), which is a markup language for creating beautiful interactive webpages. For your own webpage, you can customize the particular components and layouts that are used, but the style of the overall page is predefined by our course theme.
+  [Step]
+    Step [Display value:myLocation /] [Inline][div style:`{background: "#1f2833", width: 12, height: 12}` /][/Inline].
+  [/Step]
 
-Keep reading for examples of how to embed visualizations and modify the format.
+  [Step]
+    Step [Display value:myLocation /]
+  [/Step]
+
+  [Step]
+    Step [Display value:myLocation /]
+
+    [span style:`{color:'#aaa', fontStyle:'italic'}`][/span]
+  [/Step]
+
+[/Scroller]
+
+## Place things you create above this line. Keep all things below for reference for now!
 
 ### Embedding Visualizations
 

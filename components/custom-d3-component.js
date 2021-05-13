@@ -14,8 +14,8 @@ class CustomD3Component extends D3Component {
       .style('height', '100%')
 
     svg.append('line')
-      .style("stroke", "#C5C6C7")
-      .style("stroke-width", 5)
+      .style("stroke", "#1f2833")
+      .style("stroke-width", 1)
       .attr("x1", 5)
       .attr("y1", 0)
       .attr("x2", 5)
@@ -23,28 +23,29 @@ class CustomD3Component extends D3Component {
 
     svg
       .append('circle')
-      .attr('r', 40)
+      .attr('r', 25)
       .attr('cx', 5)
-      .attr('cy', 40)
+      .attr('cy', 35)
       .style("fill", "#66FCF1")
+      .style("stroke", "#45a29e")
+      .style("stroke-width", 3)
     
   }
 
   update(props, oldProps) {
-    y = y + 200
     this.svg
       .selectAll('circle')
     .transition()
-      .duration(750)
+      .duration(1000)
       .attr('cx', 5)
-      .attr('cy', props.state * 100)
+      .attr('cy', ((props.state) * 300))
       .ease(d3.easeCubic)
     .transition()
-      .attr('r', 45)
+      .attr('r', 35)
       .duration(300)
       .ease(d3.easeLinear)
     .transition()
-      .attr('r', 40)
+      .attr('r', 25)
       .duration(300)
       .ease(d3.easeLinear)
   }

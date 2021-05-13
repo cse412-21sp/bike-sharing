@@ -1,6 +1,7 @@
+/* changes the background of the animated scroller*/
 .d3-component svg {
-  background: #1f2833;
-  max-height: 300px;
+  background: white;
+  max-height: 600px;
 }
 .vg-tooltip table {
   margin-bottom: 0px;
@@ -19,9 +20,9 @@
   position:relative; left:0px;
 }
 .d3-component-container {
-  height: 20vw;
+  height: 40vw;
   width: 20vw;
-  margin-left: 72vw;
+  margin-left: 0vw;
 }
 #idyll-scroll-1 > .idyll-scroll-graphic {
   background: #1f2833;
@@ -29,6 +30,8 @@
 @media only screen and (max-width: 600px) {
   .idyll-scroll .idyll-text-container {
     max-width: 57vw;
+    background: #1f2833;
+
   }
   .idyll-scroll-text .idyll-step {
     max-width: 57vw;
