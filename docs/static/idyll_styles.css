@@ -1181,7 +1181,7 @@ h2.dek {
 }
 .article-header a {
   color: white;
-  
+  text-decoration: underline;
 }
 .idyll-dynamic {
   cursor: ew-resize;
