@@ -1,5 +1,5 @@
 .d3-component svg {
-  background: #ddd;
+  background: #1f2833;
   max-height: 300px;
 }
 .vg-tooltip table {
@@ -16,6 +16,7 @@
 }
 .idyll-scroll-text .idyll-step {
   max-width: 45vw;
+  position:relative; left:0px;
 }
 .d3-component-container {
   height: 20vw;
@@ -23,7 +24,7 @@
   margin-left: 72vw;
 }
 #idyll-scroll-1 > .idyll-scroll-graphic {
-  background: #33333f;
+  background: #1f2833;
 }
 @media only screen and (max-width: 600px) {
   .idyll-scroll .idyll-text-container {
@@ -33,8 +34,9 @@
     max-width: 57vw;
   }
   .d3-component-container {
-    height: 31vw;
+    height: 100vw;
     width: 31vw;
     margin-left: 65vw;
   }
 }
+

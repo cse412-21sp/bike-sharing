@@ -1,14 +1,14 @@
-[meta title:"CSE412 Final Project" description:"The initial template for the CSE412 Final Projects (Spring 2021)" /]
+[meta title:"CSE412 Final Project" description:"Bike Sharing in DC" /]
 
 [Header
   fullWidth:true
   title:"Bike Sharing in DC"
   subtitle:"exploring bike sharing data from the last decade"
-  author:"Our Names: Nadia Domnina, Nathaniel Marcuson, Frank Wu"
+  author:"Nadia Domnina, Nathaniel Marcuson, Frank Wu"
   authorLink: "
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
-  date:"May 10, 2021"
-  background:"#33333f"
+  date:"May 12, 2021"
+  background:"#1f2833"
   color:"#ffffff"
    /]
 
@@ -197,16 +197,17 @@ This page also describes a variety of the other built-in components for controll
 
 Let's take a look at some dynamic visualization updates with another scrollytelling example. In this case, we will use a fixed visualization alongside the text and update the visualization as we go. Keep scrolling to see the example...
 
+
 [var name:"myLocation" value:0 /]
 
 [Scroller className:"hasBackground" currentStep:myLocation]
 
   [Graphic className:"d3-component-container"]
-    [CustomD3Component className:"d3-component" state:`myLocation+1` /]
+    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
   [/Graphic]
 
   [Step]
-    This `Scroller` uses some custom CSS to set the background color to "#33333f" [Inline][div style:`{background: "#33333f", width: 12, height: 12}` /][/Inline].
+    This `Scroller` uses some custom CSS to set the background color to "#1f2833" [Inline][div style:`{background: "#1f2833", width: 12, height: 12}` /][/Inline].
   [/Step]
 
   [Step]
