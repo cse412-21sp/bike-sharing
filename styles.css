@@ -1,6 +1,6 @@
 /* changes the background of the animated scroller*/
 .d3-component svg {
-  background: white;
+  background: #1f2833;
   max-height: 600px;
 }
 .vg-tooltip table {

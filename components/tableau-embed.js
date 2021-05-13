@@ -6,7 +6,8 @@ class TableauEmbed extends React.Component {
     return (
       <iframe 
         src={this.props.link + ':showVizHome=no&:embed=true'}
-        width={this.props.width} 
+        seamless={"seamless"}
+        width={this.props.width}
         height={this.props.height}
       />
     );

@@ -14,6 +14,11 @@
 
 Over the last 10 years bike sharing has become more and more popular in big cities, specifically DC. The use of these bikes has immediate and long term benefits due to the decreased use of automobile transportation, which reduces emissions and helps eliminate traffic from city streets. By exploring several datasets regarding the use of these bikes, we hope to gain more insight into when and where they are most used. Through these findings, decisions can be made on where to best place  bikes and what other cities would most benefit from the introduction of the bike share system. We plan to create a geographical mapping of the trips being taken in order to give viewers a good sense of which stations are the most popular starting points and destinations. We also plan on making animated time series charts showing the monthly and yearly trends in overall usage, and pairing these trends with weather data
 
+
+[TableauEmbed link:"https://public.tableau.com/views/BikeRides_16208820361550/Sheet1?:language=en&:display_count=y&:origin=viz_share_link" width:"100%" height:"600"/]
+
+![Monthly Patterns](./static/images/monthly_ride_patterns.png)
+
 [var name:"myLocation" value:0 /]
 
 [Scroller className:"hasBackground" currentStep:myLocation]
