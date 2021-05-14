@@ -56,11 +56,13 @@ We can easily embed images inline by including a short code snippet referencing 
 
  First, we specify the data that will be used in the visualization with a short code snippet: `[data name:"sunshine" source:"sunshine.json" /]`. We will reference this dataset with the name `sunshine` when creating visualizations in Vega-Lite or D3.
 
- I edited the graph below to delete Seattle, and created one below that one with only Seattle and the mean sunshine. I wanted some d3 practice ~ Nat 
-
 [data name:"sunshine" source:"sunshine.csv" /]
 
 [data name:"sunshine2" source:"sunshine2.csv" /]
+
+[data name:"day" source:"day.csv" /]
+
+[data name:"hour" source:"hour.csv" /]
 
 #### Embedding Vega-Lite visualizations
 
@@ -103,6 +105,10 @@ The main thing to note when using the API is that you must call `.toSpec()` at t
 #### Embedding D3 visualizations
 
 Idyll has a pre-supported component for rendering D3 visualizations; to create a visualization, you can write a new component that extends this custom class. To see how this work, take a look at the file `d3-sunshine` in the `components` directory. In essence, you will create a seperate custom D3 component for each visualization that you would like to create in D3 for your page.
+
+I made the graph directly below, and added the idyll markdown so that the graph below that one (with the axes) would show up. It's mean bike usage by hour of the day. ~ Nat
+
+[D3BikeByHour data:hour /]
 
 [D3Bike1 data:day /]
 
