@@ -102,7 +102,6 @@ class D3BikeByHourByDay extends D3Component {
         return 0;
       });
       if (keys == "0") {
-        alert("we made it buds");
         path.append("path")
        		.datum(nestedData)
           .attr("class", "line")
