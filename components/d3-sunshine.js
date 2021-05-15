@@ -27,7 +27,10 @@ class D3Sunshine extends D3Component {
     const yAxis = d3.axisLeft(y);
 
     // Get the cities
-    var citySet = [... new Set(props.data.map(d => d.city))];
+    const set1 = new Set(props.data.map(d => d.city));
+    set1.delete("Seattle");
+    var citySet = [... set1];
+    //var citySet = [... new Set(props.data.map(d => d.city))];
 
     // Create the color scale
     const color = d3.scaleOrdinal()

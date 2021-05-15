@@ -1,4 +1,4 @@
-[meta title:"CSE412 Final Project" description:"The initial template for the CSE412 Final Projects (Spring 2021)" /]
+[meta title:"CSE412 Final Project" description:"Bike Sharing in DC" /]
 
 [Header
   fullWidth:true
@@ -7,22 +7,44 @@
   author:"Our Names: Nadia Domnina, Nathaniel Marcuson, Frank Wu, Ashina Agarwal"
   authorLink: "
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
-  date:"May 10, 2021"
-  background:"#33333f"
+  date:"May 12, 2021"
+  background:"#1f2833"
   color:"#ffffff"
    /]
 
-The final project will provide hands-on experience designing, implementing, and deploying interactive visualizations for the web. For this project, you will select a topic of interest and author a narrative article and accompanying visualizations to educate and inform a general audience. Think of your project as contributing to our own class newspaper or scientific magazine. The final deliverable will take the form of an explanatory narrative, deployed as an interactive web page using GitHub Pages. You will leverage the template and style provided here.
+Over the last 10 years bike sharing has become more and more popular in big cities, specifically DC. The use of these bikes has immediate and long term benefits due to the decreased use of automobile transportation, which reduces emissions and helps eliminate traffic from city streets. By exploring several datasets regarding the use of these bikes, we hope to gain more insight into when and where they are most used. Through these findings, decisions can be made on where to best place  bikes and what other cities would most benefit from the introduction of the bike share system. We plan to create a geographical mapping of the trips being taken in order to give viewers a good sense of which stations are the most popular starting points and destinations. We also plan on making animated time series charts showing the monthly and yearly trends in overall usage, and pairing these trends with weather data
 
-This paragraph is brought to you by Nat.
+[Float position: "left"]
+[ObservableEmbed link:"https://observablehq.com/embed/@domnina/bike-viz?cells=plot" width:"200%" height:"700"   /]
+[/Float]
 
-## The theme is data visualization for communicating scientific advancements or social phenomena. How might data visualization help us better understand the workings of our society or our physical world?
+![Monthly Patterns](./static/images/monthly_ride_patterns.png)
 
-Your project must visualize one or more publicly accessible datasets of social or scientific importance. You are free to choose a specific domain of personal interest; for example, you might explore data relevant to your UW major. Example topics include transportation, economic development, humanitarian aid, legislative voting records, and communicating scientific research, among many others. Talk to the course staff if you have any questions regarding the project theme.
+[var name:"myLocation" value:0 /]
 
-This template was created with [Idyll](https://idyll-lang.org/docs), which is a markup language for creating beautiful interactive webpages. For your own webpage, you can customize the particular components and layouts that are used, but the style of the overall page is predefined by our course theme.
+[Scroller className:"hasBackground" currentStep:myLocation]
 
-Keep reading for examples of how to embed visualizations and modify the format.
+  [Graphic className:"d3-component-container"]
+    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
+  [/Graphic]
+
+  [Step]
+    Step [Display value:myLocation /] [Inline][div style:`{background: "#1f2833", width: 12, height: 12}` /][/Inline].
+  [/Step]
+
+  [Step]
+    Step [Display value:myLocation /]
+  [/Step]
+
+  [Step]
+    Step [Display value:myLocation /]
+
+    [span style:`{color:'#aaa', fontStyle:'italic'}`][/span]
+  [/Step]
+
+[/Scroller]
+
+## Place things you create above this line. Keep all things below for reference for now!
 
 ### Embedding Visualizations
 
@@ -35,6 +57,12 @@ We can easily embed images inline by including a short code snippet referencing 
  First, we specify the data that will be used in the visualization with a short code snippet: `[data name:"sunshine" source:"sunshine.json" /]`. We will reference this dataset with the name `sunshine` when creating visualizations in Vega-Lite or D3.
 
 [data name:"sunshine" source:"sunshine.csv" /]
+
+[data name:"sunshine2" source:"sunshine2.csv" /]
+
+[data name:"day" source:"day.csv" /]
+
+[data name:"hour" source:"hour.csv" /]
 
 #### Embedding Vega-Lite visualizations
 
@@ -78,7 +106,15 @@ The main thing to note when using the API is that you must call `.toSpec()` at t
 
 Idyll has a pre-supported component for rendering D3 visualizations; to create a visualization, you can write a new component that extends this custom class. To see how this work, take a look at the file `d3-sunshine` in the `components` directory. In essence, you will create a seperate custom D3 component for each visualization that you would like to create in D3 for your page.
 
+I made the graph directly below, and added the idyll markdown so that the graph below that one (with the axes) would show up. It's mean bike usage by hour of the day. ~ Nat
+
+[D3BikeByHour data:hour /]
+
+[D3Bike1 data:day /]
+
 [D3Sunshine data:sunshine /]
+
+[D3Sunshine2 data:sunshine2 /]
 
 #### Embedding Tableau visualizations
 
@@ -197,16 +233,17 @@ This page also describes a variety of the other built-in components for controll
 
 Let's take a look at some dynamic visualization updates with another scrollytelling example. In this case, we will use a fixed visualization alongside the text and update the visualization as we go. Keep scrolling to see the example...
 
+
 [var name:"myLocation" value:0 /]
 
 [Scroller className:"hasBackground" currentStep:myLocation]
 
   [Graphic className:"d3-component-container"]
-    [CustomD3Component className:"d3-component" state:`myLocation+1` /]
+    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
   [/Graphic]
 
   [Step]
-    This `Scroller` uses some custom CSS to set the background color to "#33333f" [Inline][div style:`{background: "#33333f", width: 12, height: 12}` /][/Inline].
+    This `Scroller` uses some custom CSS to set the background color to "#1f2833" [Inline][div style:`{background: "#1f2833", width: 12, height: 12}` /][/Inline].
   [/Step]
 
   [Step]
