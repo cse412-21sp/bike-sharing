@@ -12,17 +12,34 @@
   color:"#ffffff"
    /]
 
-Over the last 10 years bike sharing has become more and more popular in big cities, specifically DC. The use of these bikes has immediate and long term benefits due to the decreased use of automobile transportation, which reduces emissions and helps eliminate traffic from city streets. By exploring several datasets regarding the use of these bikes, we hope to gain more insight into when and where they are most used. Through these findings, decisions can be made on where to best place  bikes and what other cities would most benefit from the introduction of the bike share system. We plan to create a geographical mapping of the trips being taken in order to give viewers a good sense of which stations are the most popular starting points and destinations. We also plan on making animated time series charts showing the monthly and yearly trends in overall usage, and pairing these trends with weather data
+Over the last 10 years bike sharing has become more and more popular in big cities, specifically DC.By exploring several datasets regarding the use of these bikes, we hope to gain more insight into when and where they are most used. Through these findings, decisions can be made on where to best place  bikes and what other cities would most benefit from the introduction of the bike share system. We plan to create a geographical mapping of the trips being taken in order to give viewers a good sense of which stations are the most popular starting points and destinations. We also plan on making animated time series charts showing the monthly and yearly trends in overall usage, and pairing these trends with weather data
+
+The following map displays the locations from which bike rides begin.(It will be much more interesting once the data also includes the station names)
+
+[FullWidth]
+[TableauEmbed link:"https://public.tableau.com/views/StartStation/Sheet6?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"900"  /]
+[/FullWidth]
+
+In contrast, this map displays the locations where bike rides end.(It will be much more interesting once the data also includes the station names)
+
+[FullWidth]
+[TableauEmbed link:"https://public.tableau.com/views/StartStation/Sheet7?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"900"  /]
+[/FullWidth]
+
+The following chart shows bike usage over a span of a year. We can see that the most usage happens in the summertime and the least in the winter.
 
 [Float position: "left"]
-[ObservableEmbed link:"https://observablehq.com/embed/@domnina/bike-viz?cells=plot" width:"200%" height:"700"   /]
+[ObservableEmbed link:"https://observablehq.com/embed/@domnina/bike-viz?cells=plot" width:"200%" height:"500"   /]
 [/Float]
+
 
 ![Monthly Patterns](./static/images/monthly_ride_patterns.png)
 
 [var name:"myLocation" value:0 /]
 
 Alright I'm practicing d3 below here. This one is incomplete, but it's gonna have 7 lines for each day of the week. 
+
+^^ This will be so cool looking if you make it animated!!!
 
 [data name:"hour" source:"hour.csv" /]
 
