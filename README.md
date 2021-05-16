@@ -2,19 +2,19 @@
 
 ## Team Members
 
-Nadia Domnina
-Nathaniel Marcuson
-Olivia H
-Ashina Agarwal
-Frank Vu
+- Nadia Domnina
+- Nathaniel Marcuson
+- Olivia H
+- Ashina Agarwal
+- Frank Vu
 
 ### Contribution Statements
 
-Nadia Domnina: 2 tableau maps, 1 vegalite line chart, 
-Nathaniel Marcuson: 2 d3 line charts,
-Olivia H: data wrangling,
-Ashina Agarwal
-Frank Vu
+- Nadia Domnina: 2 tableau maps, 1 vegalite line chart, 
+- Nathaniel Marcuson: 2 d3 line charts,
+- Olivia H: data wrangling,
+- Ashina Agarwal
+- Frank Vu
 
 ## Project Proposal Abstract
 
