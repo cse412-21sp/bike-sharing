@@ -12,36 +12,10 @@ const h = height - (margin.top + margin.bottom);
 
 class D3BikeByHourByDay extends D3Component {
   initialize(node, props) {
-  	// get hour shit rolled up
-  	var map_byhrday = d3.rollup(props.data, v => d3.mean(v, d => d.cnt), d => d.weekday, d => d.hr);
-	  var max_y = 600;
-    //var max_y = Math.round(Math.max(...hrs_map.values()));
-  	
-  	//max_y = Math.round(max_y);
-  	//max_y = max_y + (10 - max_y % 10);
 
-  	// CRUCIAL
-  	// change the type of data from a MAP to an ARRAY of objects
-  	/*var nestedData = [];
-    var nest2 = [];
-    map_byhrday.forEach((values,keys)=>{
-      //alert(keys);
-      nest2 = [];
-      values.forEach((values2, keys2)=>{
-        //alert(values2);
-        nest2.push(key:keys2, value:values2);
-      })
-      //alert(typeof values);
-      nestedData.push({key:keys, value:values2});
-    })*/
-
-    //alert(map_byhrday.get("0").get("16"));
-    /*map0.forEach((values,keys)=>{
-      alert(keys);
-      nestedData.push({key:keys, value:values});
-    })*/
-
-
+  	// get hour shit rolled up and hardcode a max
+  	var map_byhrday = d3.rollup(props.data, v => d3.mean(v, d => d.cnt), d => d.workingday, d => d.hr);
+	  var max_y = 575;
 
     // Create the x scale and axis
     const x = d3.scaleLinear()
@@ -56,6 +30,9 @@ class D3BikeByHourByDay extends D3Component {
       .domain([0, max_y])
       .range([h, 0]);
     const yAxis = d3.axisLeft(y);
+
+    // get some color in there
+    const color = ["#7D3C98", "#85C1E9"];
 
     // Create our SVG element
     const svg = (this.svg = d3.select(node).append('svg'));
@@ -84,9 +61,6 @@ class D3BikeByHourByDay extends D3Component {
 	    .x(function(d) { return x(d.key); })
 	    .y(function(d) { return y(d.value); });
 
-    const color = d3.scaleOrdinal()
-      .domain([0,6])
-
     var i = 0;
     map_byhrday.forEach((values,keys)=>{
       var nestedData = [];
@@ -94,22 +68,14 @@ class D3BikeByHourByDay extends D3Component {
         nestedData.push({key:keys2, value:values2});
       })
       // sort the nested data by their keys
-      nestedData = nestedData.sort(function(a, b) {
-        var keyA = parseFloat(a);
-        var keyB = parseFloat(b);
-        if (keyA < keyB) return -1;
-        if (keyA > keyB) return 1;
-        return 0;
-      });
-      if (keys == "0") {
-        path.append("path")
+      path.append("path")
        		.datum(nestedData)
           .attr("class", "line")
           .attr("d", valueline)
-          .style("stroke", "#000")
+          .style("stroke", color[i])
       	  .style("stroke-width", 1)
       	  .style("fill", "none");
-      }
+      i = i+1;
     })
   }
 
