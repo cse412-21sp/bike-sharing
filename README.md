@@ -2,15 +2,23 @@
 
 ## Team Members
 
-Place your team member names here.
+- Nadia Domnina
+- Nathaniel Marcuson
+- Olivia H
+- Ashina Agarwal
+- Frank Vu
 
 ### Contribution Statements
 
-Add individual contribution statements here.
+- Nadia Domnina: 2 tableau maps, 1 vegalite line chart, 
+- Nathaniel Marcuson: 2 d3 line charts,
+- Olivia H: data wrangling,
+- Ashina Agarwal
+- Frank Vu
 
 ## Project Proposal Abstract
 
-This is the space for you to add a description for your project.
+Exploring Capital Bikeshare data over the past 10 years in Washinton DC.
 
 ## Getting Started
 
