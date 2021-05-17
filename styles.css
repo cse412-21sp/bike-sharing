@@ -1,6 +1,34 @@
 /* changes the background of the animated scroller*/
+/* title*/
+h1 {
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  font-weight: lighter
+}
+
+
+.idyll-text-container {
+  max-width: 50vw;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 50px;
+}
+
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #24292e;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
 .d3-component svg {
-  background: #1f2833;
+  background:white;
   max-height: 600px;
 }
 .vg-tooltip table {
@@ -13,33 +41,42 @@
   }
 }
 .idyll-scroll .idyll-text-container {
-  max-width: 50vw;
+  max-width: 70vw;
 }
+/* textbox size*/
 .idyll-scroll-text .idyll-step {
-  max-width: 45vw;
+  max-width: 70vw;
   position:relative; left:0px;
 }
 .d3-component-container {
   height: 40vw;
   width: 20vw;
-  margin-left: 0vw;
+  margin-left: 72vw;
 }
 #idyll-scroll-1 > .idyll-scroll-graphic {
-  background: #1f2833;
+  background: white;
 }
 @media only screen and (max-width: 600px) {
+
+  /* title*/
+  h1 {
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    font-weight: lighter
+  }
+
   .idyll-scroll .idyll-text-container {
-    max-width: 57vw;
-    background: #1f2833;
+    max-width: 70vw;
+    background: white;
 
   }
   .idyll-scroll-text .idyll-step {
-    max-width: 57vw;
+    max-width: 70vw;
   }
   .d3-component-container {
     height: 100vw;
     width: 31vw;
-    margin-left: 65vw;
+    margin-left: 72vw;
   }
 }
 

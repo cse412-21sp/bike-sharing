@@ -1,11 +1,11 @@
 {
-  "name": "cse412-fp-template",
+  "name": "cse412",
   "version": "1.0.0",
   "license": "MIT",
   "idyll": {
     "context": "./context.js",
     "theme": "default",
-    "layout": "centered",
+    "layout": "blog",
     "css": "styles.css",
     "authorView": false,
     "output": "docs"

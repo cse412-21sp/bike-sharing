@@ -14,7 +14,7 @@ class CustomD3Component extends D3Component {
       .style('height', '100%')
 
     svg.append('line')
-      .style("stroke", "#1f2833")
+      .style("stroke", "black")
       .style("stroke-width", 1)
       .attr("x1", 5)
       .attr("y1", 0)
@@ -26,8 +26,7 @@ class CustomD3Component extends D3Component {
       .attr('r', 25)
       .attr('cx', 5)
       .attr('cy', 35)
-      .style("fill", "#66FCF1")
-      .style("stroke", "#45a29e")
+      .style("fill", "black")
       .style("stroke-width", 3)
     
   }
@@ -38,8 +37,8 @@ class CustomD3Component extends D3Component {
     .transition()
       .duration(1000)
       .attr('cx', 5)
-      .attr('cy', ((props.state) * 300))
-      .ease(d3.easeCubic)
+      .attr('cy', ((props.state) * 200))
+      .ease(d3.easeQuad)
     .transition()
       .attr('r', 35)
       .duration(300)
