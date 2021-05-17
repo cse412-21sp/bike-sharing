@@ -1343,6 +1343,13 @@ h1 {
   margin-left: 50px;
 }
 
+.aside {
+  display: block;
+  position: absolute;
+  width: 300px;
+  right: calc((10vw + 600px + 200px) / -2);
+}
+
 body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
