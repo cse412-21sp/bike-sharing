@@ -87,7 +87,7 @@ The following chart shows bike usage over a span of a year.
 
 ## Hourly Trends by Day of the Week
 
-Alright I'm practicing d3 below here. This one is incomplete, but it's gonna have 7 lines for each day of the week. 
+It's workdays (blue) and non-workdays (purple), and a pretty expected pattern is shown. Next I'll try to add some interaction and a legend. After I can get this done, and feel semi-okay with d3, I'm gonna try something like this to help us avoid line charts! https://observablehq.com/@d3/radial-stacked-bar-chart
 
 ^^ This will be so cool looking if you make it animated!!!
 
