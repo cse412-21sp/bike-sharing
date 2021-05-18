@@ -1,0 +1,101 @@
+,Start station number,End station number,Start station,End station,count,avg_mins
+0,31247,31247,Jefferson Dr & 14th St SW,Jefferson Dr & 14th St SW,8024,62.0
+8024,31248,31248,Smithsonian-National Mall / Jefferson Dr & 12th St SW,Smithsonian-National Mall / Jefferson Dr & 12th St SW,6812,70.0
+14836,31258,31249,Lincoln Memorial,Jefferson Memorial,6721,27.0
+21557,31247,31258,Jefferson Dr & 14th St SW,Lincoln Memorial,6440,28.0
+27997,31258,31247,Lincoln Memorial,Jefferson Dr & 14th St SW,5217,38.0
+33214,31258,31258,Lincoln Memorial,Lincoln Memorial,4843,43.0
+38057,31623,31631,Columbus Circle / Union Station,8th & F St NE,4259,4.0
+42316,31248,31258,Smithsonian-National Mall / Jefferson Dr & 12th St SW,Lincoln Memorial,4258,33.0
+46574,31631,31623,8th & F St NE,Columbus Circle / Union Station,3950,4.0
+50524,31288,31288,4th St & Madison Dr NW,4th St & Madison Dr NW,3944,61.0
+54468,31249,31258,Jefferson Memorial,Lincoln Memorial,3928,27.0
+58396,31290,31258,17th St & Independence Ave SW,Lincoln Memorial,3741,22.0
+62137,31258,31248,Lincoln Memorial,Smithsonian-National Mall / Jefferson Dr & 12th St SW,3424,40.0
+65561,31240,31240,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,3349,65.0
+68910,31290,31290,17th St & Independence Ave SW,17th St & Independence Ave SW,3327,47.0
+72237,31249,31249,Jefferson Memorial,Jefferson Memorial,3195,50.0
+75432,31623,31615,Columbus Circle / Union Station,6th & H St NE,2927,5.0
+78359,31249,31247,Jefferson Memorial,Jefferson Dr & 14th St SW,2912,25.0
+81271,31289,31289,Henry Bacon Dr & Lincoln Memorial Circle NW,Henry Bacon Dr & Lincoln Memorial Circle NW,2881,47.0
+84152,31289,31247,Henry Bacon Dr & Lincoln Memorial Circle NW,Jefferson Dr & 14th St SW,2794,40.0
+86946,31240,31249,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,Jefferson Memorial,2773,21.0
+89719,31247,31249,Jefferson Dr & 14th St SW,Jefferson Memorial,2741,27.0
+92460,31247,31289,Jefferson Dr & 14th St SW,Henry Bacon Dr & Lincoln Memorial Circle NW,2739,34.0
+95199,31104,31121,Adams Mill & Columbia Rd NW,Calvert St & Woodley Pl NW,2710,4.0
+97909,31613,31619,Eastern Market Metro / Pennsylvania Ave & 7th St SE,Lincoln Park / 13th & East Capitol St NE ,2689,7.0
+100598,31247,31248,Jefferson Dr & 14th St SW,Smithsonian-National Mall / Jefferson Dr & 12th St SW,2614,57.0
+103212,31247,31288,Jefferson Dr & 14th St SW,4th St & Madison Dr NW,2556,35.0
+105768,31614,31623,11th & H St NE,Columbus Circle / Union Station,2529,7.0
+108297,31288,31247,4th St & Madison Dr NW,Jefferson Dr & 14th St SW,2526,34.0
+110823,31248,31247,Smithsonian-National Mall / Jefferson Dr & 12th St SW,Jefferson Dr & 14th St SW,2510,57.0
+113333,31258,31290,Lincoln Memorial,17th St & Independence Ave SW,2430,30.0
+115763,31121,31104,Calvert St & Woodley Pl NW,Adams Mill & Columbia Rd NW,2397,4.0
+118160,31615,31623,6th & H St NE,Columbus Circle / Union Station,2395,5.0
+120555,31619,31613,Lincoln Park / 13th & East Capitol St NE ,Eastern Market Metro / Pennsylvania Ave & 7th St SE,2382,7.0
+122937,31200,31201,Massachusetts Ave & Dupont Circle NW,15th & P St NW,2341,6.0
+125278,31258,31240,Lincoln Memorial,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,2327,29.0
+127605,31289,31248,Henry Bacon Dr & Lincoln Memorial Circle NW,Smithsonian-National Mall / Jefferson Dr & 12th St SW,2316,42.0
+129921,31201,31200,15th & P St NW,Massachusetts Ave & Dupont Circle NW,2307,6.0
+132228,31288,31258,4th St & Madison Dr NW,Lincoln Memorial,2285,42.0
+134513,31640,31623,Maryland Ave & E St NE,Columbus Circle / Union Station,2283,6.0
+136796,31623,31640,Columbus Circle / Union Station,Maryland Ave & E St NE,2216,7.0
+139012,31249,31240,Jefferson Memorial,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,2196,24.0
+141208,31229,31200,New Hampshire Ave & T St NW,Massachusetts Ave & Dupont Circle NW,2170,6.0
+143378,31623,31616,Columbus Circle / Union Station,3rd & H St NE,2162,4.0
+145540,31258,31288,Lincoln Memorial,4th St & Madison Dr NW,2161,44.0
+147701,31289,31249,Henry Bacon Dr & Lincoln Memorial Circle NW,Jefferson Memorial,2145,33.0
+149846,31623,31614,Columbus Circle / Union Station,11th & H St NE,2139,7.0
+151985,31248,31289,Smithsonian-National Mall / Jefferson Dr & 12th St SW,Henry Bacon Dr & Lincoln Memorial Circle NW,2109,38.0
+154094,31314,31314,34th & Water St NW,34th & Water St NW,2060,59.0
+156154,31290,31249,17th St & Independence Ave SW,Jefferson Memorial,2010,24.0
+158164,31258,31077,Lincoln Memorial,Iwo Jima Memorial/N Meade & 14th St N,1994,23.0
+160158,31273,31273,Hains Point/Buckeye & Ohio Dr SW,Hains Point/Buckeye & Ohio Dr SW,1992,46.0
+162150,31622,31623,13th & D St NE,Columbus Circle / Union Station,1984,8.0
+164134,31288,31248,4th St & Madison Dr NW,Smithsonian-National Mall / Jefferson Dr & 12th St SW,1973,40.0
+166107,31108,31244,4th & M St SW,4th & E St SW,1903,7.0
+168010,31240,31258,Ohio Dr & West Basin Dr SW / MLK & FDR Memorials,Lincoln Memorial,1890,24.0
+169900,31623,31622,Columbus Circle / Union Station,13th & D St NE,1881,9.0
+171781,31612,31623,D St & Maryland Ave NE,Columbus Circle / Union Station,1838,4.0
+173619,31623,31611,Columbus Circle / Union Station,13th & H St NE,1830,9.0
+175449,31632,31623,15th & F St NE,Columbus Circle / Union Station,1817,8.0
+177266,31243,31243,4th & C St SW,4th & C St SW,1802,77.0
+179068,31248,31288,Smithsonian-National Mall / Jefferson Dr & 12th St SW,4th St & Madison Dr NW,1796,40.0
+180864,31623,31244,Columbus Circle / Union Station,4th & E St SW,1759,11.0
+182623,31310,31300,Connecticut & Nebraska Ave NW,Van Ness Metro / UDC,1759,5.0
+184382,31247,31243,Jefferson Dr & 14th St SW,4th & C St SW,1746,32.0
+186128,31244,31108,4th & E St SW,4th & M St SW,1744,6.0
+187872,31249,31248,Jefferson Memorial,Smithsonian-National Mall / Jefferson Dr & 12th St SW,1713,27.0
+189585,31619,31623,Lincoln Park / 13th & East Capitol St NE ,Columbus Circle / Union Station,1680,8.0
+191265,31200,31229,Massachusetts Ave & Dupont Circle NW,New Hampshire Ave & T St NW,1678,6.0
+192943,31616,31623,3rd & H St NE,Columbus Circle / Union Station,1674,6.0
+194617,31288,31289,4th St & Madison Dr NW,Henry Bacon Dr & Lincoln Memorial Circle NW,1663,42.0
+196280,31244,31623,4th & E St SW,Columbus Circle / Union Station,1661,11.0
+197941,31633,31623,Independence Ave & L'Enfant Plaza SW/DOE,Columbus Circle / Union Station,1660,12.0
+199601,31623,31632,Columbus Circle / Union Station,15th & F St NE,1655,9.0
+201256,31408,32026,Takoma Metro,Carroll & Ethan Allen Ave,1649,6.0
+202905,31290,31289,17th St & Independence Ave SW,Henry Bacon Dr & Lincoln Memorial Circle NW,1645,28.0
+204550,31222,31222,New York Ave & 15th St NW,New York Ave & 15th St NW,1636,64.0
+206186,31249,31290,Jefferson Memorial,17th St & Independence Ave SW,1636,28.0
+207822,31613,31606,Eastern Market Metro / Pennsylvania Ave & 7th St SE,Potomac & Pennsylvania Ave SE,1629,6.0
+209451,31643,31628,1st & D St SE,1st & K St SE,1628,4.0
+211079,32026,31408,Carroll & Ethan Allen Ave,Takoma Metro,1626,6.0
+212705,31108,31634,4th & M St SW,3rd & Tingey St SE,1624,10.0
+214329,31229,31201,New Hampshire Ave & T St NW,15th & P St NW,1613,6.0
+215942,31248,31249,Smithsonian-National Mall / Jefferson Dr & 12th St SW,Jefferson Memorial,1612,30.0
+217554,31611,31623,13th & H St NE,Columbus Circle / Union Station,1603,8.0
+219157,31247,31271,Jefferson Dr & 14th St SW,Constitution Ave & 2nd St NW/DOL,1598,32.0
+220755,31271,31271,Constitution Ave & 2nd St NW/DOL,Constitution Ave & 2nd St NW/DOL,1591,58.0
+222346,31217,31623,USDA / 12th & Independence Ave SW,Columbus Circle / Union Station,1587,14.0
+223933,31290,31247,17th St & Independence Ave SW,Jefferson Dr & 14th St SW,1581,41.0
+225514,31229,31214,New Hampshire Ave & T St NW,17th & Corcoran St NW,1554,3.0
+227068,31201,31229,15th & P St NW,New Hampshire Ave & T St NW,1544,6.0
+228612,31512,31627,Neal St & Trinidad Ave NE,3rd & M St NE,1540,8.0
+230152,31247,31290,Jefferson Dr & 14th St SW,17th St & Independence Ave SW,1538,40.0
+231690,31623,31612,Columbus Circle / Union Station,D St & Maryland Ave NE,1536,6.0
+233226,31623,31243,Columbus Circle / Union Station,4th & C St SW,1511,13.0
+234737,31208,31623,M St & New Jersey Ave SE,Columbus Circle / Union Station,1508,14.0
+236245,31243,31247,4th & C St SW,Jefferson Dr & 14th St SW,1493,29.0
+237738,31628,31643,1st & K St SE,1st & D St SE,1481,5.0
+239219,31613,31622,Eastern Market Metro / Pennsylvania Ave & 7th St SE,13th & D St NE,1478,9.0
+240697,31007,31009,Crystal City Metro / 18th & Bell St,27th & Crystal Dr,1476,6.0

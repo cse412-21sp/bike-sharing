@@ -60,11 +60,16 @@ In contrast, this map displays the locations where bike rides end.(It will be mu
 
 ### Most Popular Routes and their Times
 
-We need to wrangle the data to calculate the number of rides from each location to another sepcific location for all locations. 
-
+I calculated the most popular routes in 2017. The data is good but the visualization isnt the most descriptive. 
 Example: 56th station to 100th station: total rides: 1654, average time: 22 mins. You get the point.
+I want to create somthing like this this week! 
 
-Bar chart goes here 
+simpler: https://vega.github.io/vega/examples/parallel-coordinates/
+
+harder: https://vega.github.io/vega/examples/edge-bundling/
+
+![Stacked Bar Chart](./static/images/most_popular_routes_2017.png)
+
 
 ##### Insights
 
@@ -158,35 +163,6 @@ We can easily embed images inline by including a short code snippet referencing 
 
 Idyll has support for embedding Vega-Lite visualizations to the page using a similar approach to the standard image. To get started, we need to first install Vega-Lite by running the command: `npm i --save idyll-vega-lite`. We can then embed a visualization as follows (see the `index.idyll` file for the actual code):
 
-[IdyllVegaLite actions:false width:"container" data:sunshine spec:`{
-  mark: "bar",
-  encoding: {
-    x: {
-      field: "month",
-      type: "nominal",
-      sort: "none",
-      axis: {labelAngle: 0, ticks: false}
-    },
-    y: {
-      field: "sunshine",
-      type: "quantitative"
-    },
-    tooltip: {
-      field: "sunshine",
-      type: "quantitative"
-    }
-  }
-}` /]
-
-The main Vega-Lite component uses the JSON syntax, but you can also create Vega-Lite visualizations using the API as follows:
-
-[IdyllVegaLite actions:false width:"container" data:sunshine spec:`
-  vl.markBar().encode(
-    vl.x().fieldN("month").sort("none").axis({labelAngle: 0, ticks: false}),
-    vl.y().fieldQ("sunshine"),
-    vl.tooltip().fieldQ("sunshine")
-  ).toSpec()
-` /]
 
 The main thing to note when using the API is that you must call `.toSpec()` at the end of your code in order to make the `IdyllVegaLite` component behave normally.
 
