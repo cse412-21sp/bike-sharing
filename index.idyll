@@ -105,6 +105,14 @@ It's workdays (blue) and non-workdays (purple), and a pretty expected pattern is
 - 2.
 - 3.
 
+## Weather Trends
+
+Will refine this further later. Just wanted to get some weather stuff in.
+
+[FullWidth]
+[TableauEmbed link:"https://public.tableau.com/views/cseproject/WeathervsNumberofRiders?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"900"  /]
+[/FullWidth]
+
 ## Scroller for some static images (unfinished)
 
 Not sure what graphs we can even put here, out of ideas at the moment. But 3-4 different ones would be good, even if its the same graph but with different annotations ,bringing attention to different insights.
