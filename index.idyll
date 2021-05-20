@@ -4,7 +4,7 @@
   fullWidth:true
   title:"Bike Sharing in DC"
   subtitle:"exploring bike sharing data from the last decade"
-  author:"Nadia Domnina, Nathaniel Marcuson, Olivia H, Frank Wu, Ashina Agarwal"
+  author:"Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal"
   authorLink: "
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
   date:"May 17, 2021"
@@ -15,6 +15,10 @@
 [Aside]
 ![Placeholder](./static/images/place.png)
 [/Aside]
+
+//[data name:"bike_stats" source:"bike_stats.csv" /]
+[D3RideDuration data:null /]
+
 
 ## Background
 
