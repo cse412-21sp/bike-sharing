@@ -9,16 +9,8 @@
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
   date:"May 17, 2021"
   background:"#1f2833"
-  color:"#ffffff"
+  color:"white"
    /]
-
-[Aside]
-![Placeholder](./static/images/bike_duration.JPG)
-[/Aside]
-
-//[data name:"bike_stats" source:"bike_stats.csv" /]
-[D3RideDuration data:null /]
-
 
 ## Background
 
@@ -34,12 +26,12 @@ We collected data from the DC BikeShare website on all the bike rides that have 
 
 ### Starting Points
 
-The following map displays the locations from which bike rides begin.
+The following visualizations show the locations from which bike rides begin.
 
-(It will be much more interesting once the data also includes the station names)
+![Starting Point Bar Chart](./static/images/start_bar.png)[Inline][div style:`{background: "#1f2833" position: "center"}` /][/Inline]
 
 [FullWidth]
-[TableauEmbed link:"https://public.tableau.com/views/StartStation/Sheet6?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"850"  /]
+[TableauEmbed link:"https://public.tableau.com/views/2017BikeRoutes/Sheet12?:language=en&:display_count=y&publish=yes&:origin=viz_share_link" width:"100%" height:"800"/]
 [/FullWidth]
 
 ##### Insights
@@ -52,8 +44,10 @@ The following map displays the locations from which bike rides begin.
 
 In contrast, this map displays the locations where bike rides end.(It will be much more interesting once the data also includes the station names)
 
+![Destinations Bar Chart](./static/images/destinations_bar.png)
+
 [FullWidth]
-[TableauEmbed link:"https://public.tableau.com/views/StartStation/Sheet7?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"900"  /]
+[TableauEmbed link:"https://public.tableau.com/views/DistinationsofBikeRides/Sheet122?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
 [/FullWidth]
 
 ##### Insights
@@ -62,7 +56,7 @@ In contrast, this map displays the locations where bike rides end.(It will be mu
 - 2.
 - 3.
 
-### Most Popular Routes and their Times
+### Most Popular Routes 
 
 I calculated the most popular routes in 2017. The data is good but the visualization isnt the most descriptive. 
 Example: 56th station to 100th station: total rides: 1654, average time: 22 mins. You get the point.
@@ -72,7 +66,9 @@ simpler: https://vega.github.io/vega/examples/parallel-coordinates/
 
 harder: https://vega.github.io/vega/examples/edge-bundling/
 
-![Stacked Bar Chart](./static/images/most_popular_routes_2017.png)
+![Stacked Bar Chart](./static/images/routes_2017_most_popular.png)
+
+[ObservableEmbed link:"https://observablehq.com/embed/@domnina/2017-routes-sunburst?cells=chart" width:"100%" height:"1039" /]
 
 
 ##### Insights
@@ -109,6 +105,14 @@ It's workdays (blue) and non-workdays (purple), and a pretty expected pattern is
 - 2.
 - 3.
 
+## Time Trends
+
+![Placeholder](./static/images/bike_duration.JPG)
+
+//[data name:"bike_stats" source:"bike_stats.csv" /]
+[D3RideDuration data:null /]
+
+
 ## Weather Trends
 
 Will refine this further later. Just wanted to get some weather stuff in.
@@ -122,6 +126,7 @@ Will refine this further later. Just wanted to get some weather stuff in.
 Not sure what graphs we can even put here, out of ideas at the moment. But 3-4 different ones would be good, even if its the same graph but with different annotations ,bringing attention to different insights.
 
 This can be moved up to a more relevant section as well
+
 
 [Scroller className:"hasBackground" currentStep:myLocation]
 

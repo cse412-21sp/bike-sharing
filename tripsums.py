@@ -23,7 +23,7 @@ df_inner = pd.merge(df2, df3, on=['Start station number', "End station number", 
 df_inner.sort_values(by=['count'], inplace=True, ascending=False)
 
 stats = df_inner[["count", "avg_mins"]].describe()
-stats.to_csv("bike_stats.csv")
+#stats.to_csv("bike_stats.csv")
 
 #filter
 
@@ -34,7 +34,7 @@ most_popular = pd.merge(df_inner, df, on=['Start station number', "End station n
 most_popular = most_popular.drop("Duration", axis =1)
 most_popular = most_popular.drop_duplicates()
 most_popular = most_popular.nlargest(100,'count')
-most_popular['avg_mins'] = most_popular['avg_mins'].apply(lambda x: round(x, 0)).as_type(int)
-most_popular.to_csv("most_popular_routes2017.csv")
+most_popular['avg_mins'] = most_popular['avg_mins'].apply(lambda x: round(x, 0))
+#most_popular.to_csv("most_popular_routes2017.csv")
 
 ##print(df_inner)
