@@ -25,7 +25,20 @@ class D3RideDuration extends D3Component {
     const svg = (this.svg = d3.select(node).append('svg'))
         .attr('width', width + margin.left + margin.right)
         .attr('height', height + margin.top + margin.bottom)
+        
+    svg.append('rect')
+      .attr('width','100%')
+      .attr('height','100%')
+      .attr('fill','WhiteSmoke');
 
+    svg.append('text')
+        .attr('transform','translate('+ ((width/2)-50)+','+(height/2)+')')
+        .attr('fill','black')
+        .attr('font-size','24px')
+        .attr('font-weight','bold')
+        .attr('x',0)
+        .attr('y',0)
+        .text('Loading Data...')
       }
 
 
@@ -53,7 +66,8 @@ class D3RideDuration extends D3Component {
         const yaxis = d3.axisLeft()
           .scale(yscale)
           .ticks(4, '~s');
-
+        this.svg.select('rect').remove()
+        this.svg.select('text').remove()
         // Add x-axis
         this.svg.append('g')
         .attr('transform', 'translate(0,' + (height - margin.bottom) + ')')
