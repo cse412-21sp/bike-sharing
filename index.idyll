@@ -142,6 +142,10 @@ Will refine this further later. Just wanted to get some weather stuff in.
 
 [D3RideDuration data:large_duration_data /]
 
+## Registered vs Casual Users
+
+![Registered vs Causal Bar Chart](./static/images/cas_vs_reg.png)
+
 ## Scroller for some static images (unfinished)
 
 Not sure what graphs we can even put here, out of ideas at the moment. But 3-4 different ones would be good, even if its the same graph but with different annotations ,bringing attention to different insights.
