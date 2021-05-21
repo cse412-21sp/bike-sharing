@@ -111,14 +111,6 @@ It's workdays (blue) and non-workdays (purple), and a pretty expected pattern is
 - 2.
 - 3.
 
-## Time Trends
-
-![Placeholder](./static/images/bike_duration.JPG)
-
-//[data name:"bike_stats" source:"bike_stats.csv" /]
-[D3RideDuration data:null /]
-
-
 ## Weather Trends
 
 Will refine this further later. Just wanted to get some weather stuff in.
@@ -146,37 +138,37 @@ Will refine this further later. Just wanted to get some weather stuff in.
 
 ![Registered vs Causal Bar Chart](./static/images/cas_vs_reg.png)
 
-## Scroller for some static images (unfinished)
+// ## Scroller for some static images (unfinished)
 
-Not sure what graphs we can even put here, out of ideas at the moment. But 3-4 different ones would be good, even if its the same graph but with different annotations ,bringing attention to different insights.
+// Not sure what graphs we can even put here, out of ideas at the moment. But 3-4 different ones would be good, even if its the same graph but with different annotations ,bringing attention to different insights.
 
-This can be moved up to a more relevant section as well
+// This can be moved up to a more relevant section as well
 
-[var name:"myLocation" value:0 /]
+// [var name:"myLocation" value:0 /]
 
-[Scroller className:"hasBackground" currentStep:myLocation]
+// [Scroller className:"hasBackground" currentStep:myLocation]
 
-  [Graphic className:"d3-component-container"]
-    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
-  [/Graphic]
+//   [Graphic className:"d3-component-container"]
+//     [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
+//   [/Graphic]
 
-  [Step]
-    This would be a good place to put some static visualizations. For example, jpg's from Tableau. The scroller makes it more interesting than it is.
-    Step [Display value:myLocation /] [Inline][div style:`{background: "#1f2833", width: 12, height: 12}` /][/Inline]
-    ![Monthly Patterns](./static/images/monthly_ride_patterns.png)
-  [/Step]
+//   [Step]
+//     This would be a good place to put some static visualizations. For example, jpg's from Tableau. The scroller makes it more interesting than it is.
+//     Step [Display value:myLocation /] [Inline][div style:`{background: "#1f2833", width: 12, height: 12}` /][/Inline]
+//     ![Monthly Patterns](./static/images/monthly_ride_patterns.png)
+//   [/Step]
 
-  [Step]
-    Step [Display value:myLocation /]
-    ![Placeholder Image](./static/images/place.png)
-  [/Step]
+//   [Step]
+//     Step [Display value:myLocation /]
+//     ![Placeholder Image](./static/images/place.png)
+//   [/Step]
 
-  [Step]
-    Step [Display value:myLocation /]
-    ![Placeholder Image](./static/images/place.png)
-  [/Step]
+//   [Step]
+//     Step [Display value:myLocation /]
+//     ![Placeholder Image](./static/images/place.png)
+//   [/Step]
 
-[/Scroller]
+// [/Scroller]
 
 ## Data Sources
 
