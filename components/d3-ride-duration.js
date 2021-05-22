@@ -39,6 +39,7 @@ class D3RideDuration extends D3Component {
         .attr('x',0)
         .attr('y',0)
         .text('Loading Data...')
+
       }
 
 
@@ -49,29 +50,30 @@ class D3RideDuration extends D3Component {
 
         this.chart_data = this.data_clean(props.data);
 
-        // Create the x scale and axis
-        const xscale = d3.scaleLinear()
-          .domain(this.ride_lengths)
-          .range([margin.left, width - margin.right]);
-
-        const xaxis = d3.axisBottom()
-          .scale(xscale)
-          .tickValues(d3.range(0, 50, 6));
-
-
         // Create the y scale and axis
-        const yscale = d3.scaleLog()
+        const linear_yscale = d3.scaleLinear()
           .domain(this.bikers)
           .range([height - margin.bottom, margin.top]);
-        const yaxis = d3.axisLeft()
-          .scale(yscale)
-          .ticks(4, '~s');
+
+        const linear_yaxis = d3.axisLeft()
+          .scale(linear_yscale)
+          .ticks(10);
+        
+        this.xscale = d3.scaleLinear()
+          .domain(this.ride_lengths)
+          .range([margin.left, width - margin.right]);
+    
+        this.xaxis = d3.axisBottom()
+          .scale(this.xscale)
+          .tickValues(d3.range(0, 50, 6));
+
         this.svg.select('rect').remove()
         this.svg.select('text').remove()
+
         // Add x-axis
         this.svg.append('g')
         .attr('transform', 'translate(0,' + (height - margin.bottom) + ')')
-        .call(xaxis)
+        .call(this.xaxis)
         .append('text')
           .attr('text-anchor','end')
           .attr('fill','black')
@@ -82,9 +84,10 @@ class D3RideDuration extends D3Component {
           .text('Rental Duration (hours)');
 
         // //Add y-axis
-        const y = this.svg.append("g")
+        this.svg.append("g")
           .attr("transform", 'translate(' + margin.left + ',0)')
-          .call(yaxis)
+          .call(linear_yaxis)
+          .attr("class","y-axis")
           .append('text')
             .attr('transform','translate(70, 10)')
             .attr('text-anchor','end')
@@ -98,17 +101,49 @@ class D3RideDuration extends D3Component {
         // Curve helper function
         const curveFunc = d3.area()
           .curve(d3.curveBasis)
-          .x(d => xscale(d.key) )      // Position of both line breaks on the X axis
+          .x(d => this.xscale(d.key) )      // Position of both line breaks on the X axis
           .y1(height - margin.bottom)     // Y position of top line breaks
-          .y0(d => yscale(d.value) );
+          .y0(d => linear_yscale(d.value) );
 
 
         // Add the path using this helper function
-        const chart = this.svg.append('path')
+        this.svg.append('path')
           .datum(this.chart_data)
           .attr('d', curveFunc)
+          .attr("class","my_chart")
           .attr('stroke', 'black')
-          .attr('fill', '#854e6f');
+          .attr('fill', '#ec2239');
+
+      }
+
+      if (props.inView && props.data.length !== 0) {
+        
+        // Create the y scale and axis
+        const yscale = d3.scaleLog()
+          .domain(this.bikers)
+          .range([height - margin.bottom, margin.top]);
+
+        const yaxis = d3.axisLeft()
+          .scale(yscale)
+          .ticks(10, ',.1s');
+
+        // Curve helper function
+        const log_curveFunc = d3.area()
+          .curve(d3.curveBasis)
+          .x(d => this.xscale(d.key) )      // Position of both line breaks on the X axis
+          .y1(height - margin.bottom)     // Y position of top line breaks
+          .y0(d => yscale(d.value) );
+
+        this.svg.select(".y-axis")
+        .transition()
+        .duration(2000)
+        .call(yaxis);
+
+        // Add the path using this helper function
+        this.svg.select(".my_chart")
+          .transition()
+          .duration(2000)
+          .attr('d', log_curveFunc);
 
       }
       // this.svg.selectAll('path')
@@ -116,14 +151,6 @@ class D3RideDuration extends D3Component {
       //   .duration(750)
       //   .call(linear_yaxis);
       
-      // const linear_yaxis = d3.axisLeft()
-      //   .scale(linear_yscale)
-      //   .ticks(10);
-
-
-      // const linear_yscale = d3.scaleLinear()
-      //   .domain(bikers)
-      //   .range([height - margin.bottom, margin.top])
     }
 
     data_clean(new_data) {
