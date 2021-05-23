@@ -26,8 +26,9 @@ class CustomD3Component extends D3Component {
       .attr('r', 25)
       .attr('cx', 5)
       .attr('cy', 35)
-      .style("fill", "black")
+      .style("fill", "white")
       .style("stroke-width", 3)
+      .style("stroke", "gray")
     
   }
 
