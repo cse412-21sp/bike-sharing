@@ -8,7 +8,6 @@ const width = 700;
 const height = 500;
 const w = width - (margin.left + margin.right);
 const h = height - (margin.top + margin.bottom);
-const legendSpace = 130;
 const bucket_size = 60;
 const number_hours = 50;
 
