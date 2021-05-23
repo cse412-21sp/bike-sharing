@@ -2,7 +2,7 @@ const React = require('react');
 const D3Component = require('idyll-d3-component');
 const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
-const turf = require('@turf/rewind')
+var turf = require('@turf/rewind');
 const margin = { top: 10, right: 100, bottom: 10, left: 100 };
 const width = 300;
 const height = 300;
@@ -31,20 +31,20 @@ class D3DCMap extends D3Component {
         .attr('height',height)
         .attr('fill','#333333')
 
-    // const fixed_water = waterways.features.map(function(feature) {
-    //     return turf.rewind(feature,{reverse:true});
-    // })
-    
+    const fixed_water = waterways.features.map(function(feature) {
+        return turf(feature,{reverse:true});
+    })
+    console.log(fixed_water)
     // construct the path elements using the D3 data join
     svg.selectAll('path')
         // data() expects an Array, so make sure to pass the features entry of our FeatureCollection
-        .data(waterways.features)
+        .data(fixed_water)
         // select all data items that are not represented on the map yet, and add them
         .enter()
         .append('path')
         // assign attributes to those new elements
         .attr('d', waterPathGenerator)
-        .attr('fill','none')
+        .attr('fill','#6a759e')
         .attr('stroke','#6a759e')
         .attr('stroke-width','0.5');
     
