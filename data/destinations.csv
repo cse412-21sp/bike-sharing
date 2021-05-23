@@ -1,11 +1,11 @@
-destination_name,Count,Longitude,Latitude
-Union Station,568601,-77.00493,38.89696
-Massachusetts Ave & Dupont Circle NW,532968,-77.0444,38.9101
-15th & P St NW,423363,-77.0344,38.9098
-Lincoln Memorial,412223,-77.0494,38.8883
-Jefferson Dr & 14th St SW,389092,-77.0324,38.8886
-14th & V St NW,332475,-77.0321,38.9178
-New Hampshire Ave & T St NW,314061,-77.0383,38.9155
-17th & Corcoran St NW,291993,-77.0387,38.9121
-Eastern Market Metro,290655,-76.9947,38.8843
-Thomas Circle,282878,-77.0325,38.9059
+destination_name,Count,Longitude,Latitude,reference
+Union Station,568601,-77.00493,38.89696,0
+Massachusetts Ave & Dupont Circle NW,532968,-77.0444,38.9101,1
+15th & P St NW,423363,-77.0344,38.9098,2
+Lincoln Memorial,412223,-77.0494,38.8883,3
+Jefferson Dr & 14th St SW,389092,-77.0324,38.8886,4
+14th & V St NW,332475,-77.0321,38.9178,5
+New Hampshire Ave & T St NW,314061,-77.0383,38.9155,6
+17th & Corcoran St NW,291993,-77.0387,38.9121,7
+Eastern Market Metro,290655,-76.9947,38.8843,8
+Thomas Circle,282878,-77.0325,38.9059,9
