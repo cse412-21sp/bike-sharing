@@ -6,11 +6,11 @@
 [Header
   fullWidth:true
   title:"Bike Sharing in DC"
-  subtitle:"exploring bike sharing data from the last decade"
+  subtitle:"exploratory analysis of bike sharing data"
   author:"Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal"
   authorLink: "
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
-  date:"May 17, 2021"
+  date:"May 22, 2021"
   color:"#e8e2db"
   background: "#6B7A8f"
    /]
@@ -27,7 +27,7 @@
 Over the last 10 years bike sharing has become more and more popular in big cities, specifically in Washington DC. 
 By exploring several datasets about the DC BikeShare program regarding the use of these bikes, 
 we hope to gain more insight into when and where they are most used. Through these findings, 
-decisions can be made on where to best place  bikes and what other cities would most benefit from the introduction 
+decisions can be made on where to best place bikes and what other cities would most benefit from the introduction 
 of the bike share system. We plan to create a geographical mapping of the trips being taken in order to give viewers 
 a good sense of which stations are the most popular starting points and destinations. We also plan on making animated 
 time series charts showing the monthly and yearly trends in overall usage, and pairing these trends with weather data
@@ -166,33 +166,6 @@ Will refine this further later. Just wanted to get some weather stuff in.
 
 !["Registered vs Causal Bar Chart"](./static/images/cas_vs_reg.png)
 
- ## Scroller for some static images
-
- [var name:"myLocation" value:0 /]
-
- [Scroller className:"hasBackground" currentStep:myLocation]
-
-   [Graphic className:"d3-component-container"]
-    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
-  [/Graphic]
-
-   [Step]
-     This would be a good place to put some static visualizations. For example, jpg's from Tableau. The scroller makes it more interesting than it is.
-     Step [Display value:myLocation /] [Inline][div style:`{background: "#1f2833", width: 12, height: 12}` /][/Inline]
-     ![Monthly Patterns](./static/images/monthly_ride_patterns.png)
-   [/Step]
-
-   [Step]
-     Step [Display value:myLocation /]
-     ![Placeholder Image](./static/images/place.png)
-   [/Step]
-
-   [Step]
-     Step [Display value:myLocation /]
-     ![Placeholder Image](./static/images/place.png)
-   [/Step]
-
- [/Scroller]
 
 ## Data Sources
 
