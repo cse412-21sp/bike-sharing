@@ -61,19 +61,21 @@ In contrast, this map displays the locations where bike rides end.(It will be mu
 
 !["Destinations Bar Chart"](./static/images/destinations_bar.png)
 
-
+[Fullwidth]
 [TableauEmbed link:"https://public.tableau.com/views/DistinationsofBikeRides/Sheet122?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
-
+[/Fullwidth]
 
 ##### Insights
 
-- 1. 
-- 2.
-- 3.
-
 ## Routes 2017
 
+
+ I calculated the most popular routes in 2017. 
+
+
+[Fullwidth]
 [TableauEmbed link:"https://public.tableau.com/views/Book1_16217337142700/Sheet43?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
+[/Fullwidth]
 
  [var name:"myLocation" value:0 /]
 
@@ -85,16 +87,14 @@ In contrast, this map displays the locations where bike rides end.(It will be mu
 
    [Step]
 
-    ### A Closer Look at Routes
+    ## A Closer Look at Routes
 
-    I calculated the most popular routes in 2017. 
-
-    #### Top 3 Origin Points
-    ![top 3 starting points](./static/images/top3_start.png)
+    ### Top 3 Origin Points
+    ![top 3 starting points](./static/images/routes3.jpg)
    [/Step]
 
    [Step]
-     #### Top 5 Destination Points
+     ## Top 5 Destination Points
      ![top 5 destinations](./static/images/top5_destinations.png)
    [/Step]
 
@@ -104,7 +104,7 @@ In contrast, this map displays the locations where bike rides end.(It will be mu
 
  [/Scroller]
 
-[ObservableEmbed link:"https://observablehq.com/embed/@domnina/2017-routes-sunburst?cells=chart" width:"100%" height:"1039" /]
+// [ObservableEmbed link:"https://observablehq.com/embed/@domnina/2017-routes-sunburst?cells=chart" width:"100%" height:"1039" /]
 
 
 ##### Insights

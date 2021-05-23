@@ -1389,15 +1389,15 @@ body {
   }
 }
 .idyll-scroll .idyll-text-container {
-  width: 70 vw;
-  margin-left: 15vw;
+  width: 100 vw;
+  margin-left: 5vw;
   margin-right: 15vw;
   background: #6B7A8f;
 }
 /* textbox size*/
 .idyll-scroll-text .idyll-step {
   color: white;
-  max-width: 70vw;
+  max-width: 100vw;
   background: #6B7A8f;
   border: none;
   box-shadow: none;
