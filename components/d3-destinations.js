@@ -84,28 +84,39 @@ class D3Destinations extends D3Component {
     function highlight(n){
         d3.select('.rect'+n).attr('stroke','#333').attr('stroke-width',2);
         d3.select('.marker'+n).style('opacity',1);
+        d3.select('.tooltip'+n).style('opacity',1);
 
     }
     
     function clearHighlight(n){
         if(!isClicked[n]){
             d3.select('.rect'+n).attr('stroke',null);
-            d3.select('.marker'+n).style('opacity',0);}
-    }
+            d3.select('.marker'+n).style('opacity',0);
+            d3.select('.tooltip'+n).style('opacity',0)
+        }
+        if(latest_clicked !== n){
+            d3.select('.tooltip'+n).style('opacity',0)
+        }
+            
+        }
 
     var isClicked = Array(10).fill(false);
 
     isClicked[0] = true;
     d3.select('.rect0').attr('stroke','#333').attr('stroke-width',2);
     d3.select('.marker0').style('opacity',1);
+    d3.select('.tooltip0').style('opacity',1);
 
     var latest_clicked = 0;
 
     function fullSelect(n){
         isClicked[n] = !isClicked[n];
+        d3.select('.tooltip0').style('opacity',0);
+        d3.select('.tooltip'+latest_clicked).style('opacity',0);
         latest_clicked = n;
         d3.select('.rect'+n).attr('stroke','#333').attr('stroke-width',2);
         d3.select('.marker'+n).style('opacity',1);
+        d3.select('.tooltip'+latest_clicked).style('opacity',1);
     }
       }
 

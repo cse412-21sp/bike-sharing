@@ -10,6 +10,7 @@ const width = full_width - frame_margin.left - frame_margin.right;
 const height = full_height -frame_margin.top - frame_margin.bottom;
 const map_zoom = 100;
 const padding = 20;
+const wm = [-77.0353,38.8895];
 
 class D3DCMap extends D3Component {
   initialize(node, props) {
@@ -69,7 +70,16 @@ class D3DCMap extends D3Component {
         .attr('stroke','#333333')
         .attr('fill','white')
 
-    
+    const wm_x= (DCProjection(wm)[0])+ frame_margin.left,
+        wm_y=DCProjection(wm)[1];
+
+    svg.append('path')
+        .attr('d','M0 0h7v-2h-3L3,-32L0,-35L-3,-32L-4,-2h-3v2h7z')
+        .attr('fill','#DFD8C9')
+        .attr('stroke-width','1')
+        .attr('stroke','black')
+        .attr("transform", "translate(" + wm_x + "," + wm_y + ")")
+
     svg.append('g')
         .selectAll('path')
         .data(props.coords)
@@ -82,6 +92,20 @@ class D3DCMap extends D3Component {
         .attr('stroke','black')
         .attr('stroke-width','1')
         .style('opacity',0)
+
+    svg.append('g')
+        .selectAll('text')
+        .data(props.coords)
+        .enter()
+        .append('text')
+            .attr('class', function(d,i){return 'tooltip tooltip'+i})
+            .attr('x',d => ((DCProjection([d.Longitude,d.Latitude])[0]) + frame_margin.left))
+            .attr('y',d => DCProjection([d.Longitude,d.Latitude])[1]-35)
+            .attr('width',40)
+            .attr('height',40)
+            .attr('fill','white')
+            .text(d => d.destination_name)
+            .style('opacity',0)
   
 }
 

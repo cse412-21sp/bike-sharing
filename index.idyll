@@ -125,13 +125,13 @@ These visualizations show the number of rentals that happen on workdays (blue) v
 //Next I'll try to add some interaction and a legend. After I can get this done, and feel semi-okay with d3, I'm gonna try something like this to help us avoid line charts! https://observablehq.com/@d3/radial-stacked-bar-chart
 
 
-[data name:"hour" source:"hour.csv" /]
+//[data name:"hour" source:"hour.csv" /]
 
-[D3BikeByHourByDay data:hour /]
+//[D3BikeByHourByDay data:hour /]
 
 ## Hourly Trends
 
-[D3BikeByHour data:hour /]
+//[D3BikeByHour data:hour /]
 
 ## Weather Trends
 
