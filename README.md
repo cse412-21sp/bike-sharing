@@ -4,7 +4,7 @@
 
 - Nadia Domnina
 - Nathaniel Marcuson
-- Olivia H
+- Olivia Hurd
 - Ashina Agarwal
 - Frank Vu
 
@@ -12,7 +12,7 @@
 
 - Nadia Domnina: 2 tableau maps, 1 vegalite line chart, 
 - Nathaniel Marcuson: 2 d3 line charts,
-- Olivia H: data wrangling, 2 d3 interactive visualizations
+- Olivia Hurd: data wrangling, 2 d3 interactive visualizations
 - Ashina Agarwal
 - Frank Vu
 
