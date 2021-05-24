@@ -51,6 +51,9 @@ Filter the Tableau map for the number of bikers that started at each location. S
 
 
 ## Destination Points
+[Aside]
+[D3DCMap streets:streets water:water coords:destinations /]
+[/Aside]
 
 In contrast, these visualizations display the locations where bike rides end.
 
@@ -58,11 +61,10 @@ In contrast, these visualizations display the locations where bike rides end.
 [data name:"streets" source:"streets.json"/]
 [data name:"water" source:"waterbodies.json"/]
 
-[Aside]
-[D3DCMap streets:streets water:water coords:destinations /]
-[/Aside]
-[D3Destinations data:destinations /]
 
+[D3Destinations data:destinations /]
+[br/]
+[br/]
 //!["Destinations Bar Chart"](./static/images/destinations_bar.png)
 
 [Fullwidth]
