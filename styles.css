@@ -55,6 +55,10 @@ body {
   margin-bottom: 0px;
 }
 
+.d3-dest {
+  text-align:center;
+}
+
 @media all and (max-width: 1000px) {
   .d3-component svg {
     max-height: 200px;
@@ -83,7 +87,7 @@ body {
 #idyll-scroll-0 > .idyll-scroll-graphic {
   background: #6B7A8f;
 }
-}
+
 @media only screen and (max-width: 600px) {
 
   /* title*/
@@ -106,5 +110,6 @@ body {
     width: 31vw;
     margin-left: 72vw;
   }
+
 }
 

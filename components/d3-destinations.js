@@ -3,8 +3,8 @@ const D3Component = require('idyll-d3-component');
 const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
 
-const margin = { top: 25, right: 100, bottom: 35, left: 250 };
-const width = 900;
+const margin = { top: 25, right: 45, bottom: 25, left: 250 };
+const width = 840;
 const height = 300;
 const w = width - (margin.left + margin.right);
 const h = height - (margin.top + margin.bottom);
@@ -20,7 +20,7 @@ class D3Destinations extends D3Component {
 
     // Create our SVG element
     const svg = (this.svg = d3.select(node).append('svg'))
-        .attr('width', width + margin.left + margin.right)
+        .attr('width', width)
         .attr('height', height + margin.top + margin.bottom);
 
     const xscale = d3.scaleLinear()
