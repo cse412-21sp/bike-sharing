@@ -1,4 +1,4 @@
-# CSE412 Final Project Template (Idyll)
+# CSE412 Final Project (Idyll)
 
 ## Team Members
 
