@@ -10,7 +10,6 @@
   author:"Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal"
   authorLink: "
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
-  date:"May 25, 2021"
   color:"#e8e2db"
   background: "#132445"
    /]
@@ -24,12 +23,14 @@
 [/Aside]
 
 
-[div body className: 'backgrounda']Over the last 10 years, bike sharing has become more and more popular in big cities, specifically in Washington DC. 
+[div className:"backgrounda"]
+Over the last 10 years, bike sharing has become more and more popular in big cities, specifically in Washington DC. 
 Having explored several datasets from the Capital Bikeshare program regarding the use of these bikes, 
 our goal in this project page is to pass on our insights into how citizens and tourists use the DC program. Through these findings, 
 decisions can be made on where to best place bikes, program passes to offer, and what other cities would most benefit from the introduction 
 of the bike share system. We have created geographical mappings of the trips that are taken and a number of different plots showing 
-trends related to weather, destinations, and ride duration. Explore the Capital Bikeshare program with our interactive visualizations and make your own discoveries![/div]
+trends related to weather, destinations, and ride duration. Explore the Capital Bikeshare program with our interactive visualizations and make your own discoveries!
+[/div]
 
 ## Popular Starting Points and Destinations
 
