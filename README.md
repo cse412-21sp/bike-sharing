@@ -22,4 +22,4 @@ Exploring Capital Bikeshare data over the past 10 years in Washinton DC.
 
 #### Acknowledgements
 
-This template was adapted from the initial Scrollytelling template for Idyll. The code and visualization examples were adapted from the [final project template](https://github.com/cse412-21w/project-demo) created for a previous offering of CSE 412.
+The data for this project comes from Capital Bikeshare. DC geojson adapted from @benbalter
