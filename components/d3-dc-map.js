@@ -4,11 +4,11 @@ const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
 var turf = require('@turf/rewind');
 const frame_margin = {top:30, right:30, bottom:30, left:30};
-const full_width = 400;
-const full_height = 400;
+const full_width = 600;
+const full_height = 600;
 const width = full_width - frame_margin.left - frame_margin.right;
 const height = full_height -frame_margin.top - frame_margin.bottom;
-const map_zoom = 100;
+const map_zoom = 120;
 const padding = 20;
 const wm = [-77.0353,38.8895];
 

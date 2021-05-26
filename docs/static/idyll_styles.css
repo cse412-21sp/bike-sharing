@@ -1334,11 +1334,37 @@ h1 {
   font-weight: lighter;
   margin-left: 150px;
 }
+
+body.backgrounda {
+    background-color: yellow;
+    /*position: relative;
+    padding-inline-end: 50%;*/
+    max-width: 1000;
+    /*left: -10px;
+    top: -10px;
+    right: 600px;*/
+}
+
+.article-header a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 125px;
+}
+
+h2.dek {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 12px;
+  margin-left: 150px;
+}
+
+
 .article-header {
   text-align: left;
   padding-left: 50px;
   margin-bottom: 45px;
 }
+
 
 img {
   margin: auto;
@@ -1396,13 +1422,15 @@ body {
   width: 100 vw;
   margin-left: 5vw;
   margin-right: 15vw;
-  background: #6B7A8f;
+  background:transparent;
 }
+
+
 /* textbox size*/
 .idyll-scroll-text .idyll-step {
   color: white;
   max-width: 100vw;
-  background: #6B7A8f;
+  background: transparent;
   border: none;
   box-shadow: none;
 }
@@ -1412,7 +1440,18 @@ body {
   margin-left: 80vw;
 }
 
+.idyll-scroll-graphic {
+
+  text-align: center;
+  width: 100%;
+  background: #6B7A8f;
+}
+
 #idyll-scroll-0 > .idyll-scroll-graphic {
+  background: #6B7A8f;
+}
+
+#idyll-scroll-1 > .idyll-scroll-graphic {
   background: #6B7A8f;
 }
 
@@ -1427,11 +1466,19 @@ body {
 
   .idyll-scroll .idyll-text-container {
     max-width: 70vw;
-    background: #6B7A8f;
+    background: transparent;
 
   }
   .idyll-scroll-text .idyll-step {
     max-width: 70vw;
+  }
+
+  #idyll-scroll-0 > .idyll-scroll-graphic {
+    background: #6B7A8f;
+  }
+
+  #idyll-scroll-1 > .idyll-scroll-graphic {
+    background: #6B7A8f;
   }
   .d3-component-container {
     height: 100vw;

@@ -10,7 +10,7 @@
   author:"Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal"
   authorLink: "
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
-  date:"May 22, 2021"
+  date:"May 25, 2021"
   color:"#e8e2db"
   background: "#132445"
    /]
@@ -23,13 +23,13 @@
 [/a]
 [/Aside]
 
-Over the last 10 years, bike sharing has become more and more popular in big cities, specifically in Washington DC. 
+
+[div body className: 'backgrounda']Over the last 10 years, bike sharing has become more and more popular in big cities, specifically in Washington DC. 
 Having explored several datasets from the Capital Bikeshare program regarding the use of these bikes, 
 our goal in this project page is to pass on our insights into how citizens and tourists use the DC program. Through these findings, 
 decisions can be made on where to best place bikes, program passes to offer, and what other cities would most benefit from the introduction 
 of the bike share system. We have created geographical mappings of the trips that are taken and a number of different plots showing 
-trends related to weather, destinations, and ride duration. Explore the Capital Bikeshare program with our interactive visualizations and make your own discoveries!
-
+trends related to weather, destinations, and ride duration. Explore the Capital Bikeshare program with our interactive visualizations and make your own discoveries![/div]
 
 ## Popular Starting Points and Destinations
 
@@ -43,44 +43,40 @@ of rides starting and ending at each bike station. With the help of these maps, 
 The following visualizations show the locations from which bike rides begin. 
 Filter the Tableau map for the number of bikers that started at each location. Scroll and zoom to discover more about the geography of DC.
 
+[div style:`{width: '80vw', position: "center"}`]
+[TableauEmbed link:"https://public.tableau.com/views/2017BikeRoutes/Sheet12?:language=en&:display_count=y&publish=yes&:origin=viz_share_link" width:"100%" height:"800"/]
+[/div]
 
 !["Starting Point Bar Chart"](./static/images/start_bar.png)
 
-
-[TableauEmbed link:"https://public.tableau.com/views/2017BikeRoutes/Sheet12?:language=en&:display_count=y&publish=yes&:origin=viz_share_link" width:"100%" height:"800"/]
-
-
-## Destination Points
-
-
+  ## Destination Points
+  In contrast, these visualizations display the locations where bike rides end.
+  [div style:`{width: '80vw', position: "center"}`]
+  [TableauEmbed link:"https://public.tableau.com/views/DistinationsofBikeRides/Sheet122?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
+  [/div]
 
 
-In contrast, these visualizations display the locations where bike rides end.
+  [data name:"destinations" source:"destinations.csv" /]
+  [data name:"streets" source:"streets.json"/]
+  [data name:"water" source:"waterbodies.json"/]
+  [D3Destinations data:destinations className:"d3-dest" /]
 
-[data name:"destinations" source:"destinations.csv" /]
-[data name:"streets" source:"streets.json"/]
-[data name:"water" source:"waterbodies.json"/]
+  [div style:`{width: '80vw', position: "center"}`]
+  [D3DCMap streets:streets water:water coords:destinations className:"d3-dest"/]
+  [/div]
+  [br/]
+
+  //!["Destinations Bar Chart"](./static/images/destinations_bar.png)
 
 
-[D3Destinations data:destinations className:"d3-dest" /]
-[D3DCMap streets:streets water:water coords:destinations className:"d3-dest"/]
-[br/]
-
-//!["Destinations Bar Chart"](./static/images/destinations_bar.png)
-
-[Fullwidth]
-[TableauEmbed link:"https://public.tableau.com/views/DistinationsofBikeRides/Sheet122?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
-[/Fullwidth]
 
 ## Routes 2017
 
-
  I calculated the most popular routes in 2017. 
 
-
-[Fullwidth]
+[div style:`{width: '80vw', position: "center"}`]
 [TableauEmbed link:"https://public.tableau.com/views/Book1_16217337142700/Sheet43?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
-[/Fullwidth]
+[/div]
 
  [var name:"myLocation" value:0 /]
 

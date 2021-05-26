@@ -5,7 +5,7 @@
   "idyll": {
     "context": "./context.js",
     "theme": "default",
-    "layout": "blog",
+    "layout": "centered",
     "css": "styles.css",
     "authorView": false,
     "output": "docs"
