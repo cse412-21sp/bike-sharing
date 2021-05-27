@@ -3,7 +3,7 @@ const D3Component = require('idyll-d3-component');
 const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
 
-const margin = { top: 25, right: 25, bottom: 35, left: 50 };
+const margin = { top: 25, right: 25, bottom: 35, left: 60 };
 const width = 700;
 const height = 500;
 const w = width - (margin.left + margin.right);
@@ -22,8 +22,12 @@ class D3RideDuration extends D3Component {
 
     // Create our SVG element
     const svg = (this.svg = d3.select(node).append('svg'))
-        .attr('width', width + margin.left + margin.right)
-        .attr('height', height + margin.top + margin.bottom)
+        .attr('viewBox',`0 0 ${width} ${height}`)
+        .style('width','100%')
+        .style('height','auto')
+        .style('padding','20px');
+        //.attr('width', width + margin.left + margin.right)
+        //.attr('height', height + margin.top + margin.bottom)
         
     svg.append('rect')
       .attr('width','100%')
@@ -79,7 +83,7 @@ class D3RideDuration extends D3Component {
           .attr('font-size','12px')
           .attr('font-weight','bold')
           .attr('x',width-margin.right)
-          .attr('y',margin.bottom - 5)
+          .attr('y',30)
           .text('Rental Duration (hours)');
 
         // //Add y-axis
@@ -94,7 +98,7 @@ class D3RideDuration extends D3Component {
             .attr('font-size','12px')
             .attr('font-weight','bold')
             .attr('x',0)
-            .attr('y',0)
+            .attr('y',margin.top - 15)
             .text('Number of Bike Trips');
 
         // Curve helper function
