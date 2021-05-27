@@ -1352,6 +1352,7 @@ body {
 
 .d3-dest {
   text-align:center;
+  padding:20px;
 }
 
 @media all and (max-width: 1000px) {

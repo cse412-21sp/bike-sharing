@@ -3,7 +3,7 @@ const D3Component = require('idyll-d3-component');
 const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
 
-const margin = { top: 25, right: 45, bottom: 25, left: 250 };
+const margin = { top: 25, right: 45, bottom: 25, left: 10 };
 const width = 840;
 const height = 300;
 const w = width - (margin.left + margin.right);
@@ -14,7 +14,6 @@ const labelPadding = 4;
 
 class D3Destinations extends D3Component {
   initialize(node, props) {
-
     //transform dataset
     const chart_data = props.data;
 
@@ -73,14 +72,20 @@ class D3Destinations extends D3Component {
     svg.append('g')
         .attr('transform','translate('+margin.left+','+(height - margin.bottom)+')')
         .call(xaxis);
-
+    
     svg.append('g')
         .attr('transform','translate('+margin.left+',0)')
-        .call(yaxis)
-        .call(g => g.selectAll('.tick text'))
-            .attr('font-size','13px');
+        .call(customYAxis);
+        //.call(g => g.selectAll('.tick text'))
+            //.attr('font-size','13px');
 
-    
+
+    function customYAxis(g) {
+        g.call(yaxis);
+        g.selectAll('.tick text').attr('x',5).attr('font-size','13px').attr('text-anchor','start');
+        g.selectAll(".tick line").remove();
+    }
+
     function highlight(n){
         d3.select('.rect'+n).attr('stroke','#333').attr('stroke-width',2);
         d3.select('.marker'+n).style('opacity',1);

@@ -60,9 +60,10 @@ Filter the Tableau map for the number of bikers that started at each location. S
   [data name:"destinations" source:"destinations.csv" /]
   [data name:"streets" source:"streets.json"/]
   [data name:"water" source:"waterbodies.json"/]
-  [D3Destinations data:destinations className:"d3-dest" /]
+  
 
-  [div style:`{width: '80vw', position: "center"}`]
+  [div style:`{width: '100%', display: 'flex'}`]
+  [D3Destinations data:destinations className:"d3-dest" /]
   [D3DCMap streets:streets water:water coords:destinations className:"d3-dest"/]
   [/div]
   [br/]
