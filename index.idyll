@@ -61,6 +61,13 @@ Filter the Tableau map for the number of bikers that started at each location. S
   [data name:"streets" source:"streets.json"/]
   [data name:"water" source:"waterbodies.json"/]
   
+To do:
+* format width&height as viewBox
+* place bar chart & map on same line (full width?)
+* add drag&anchor feature to map
+* add reset button to map
+* sometimes Union Square marker doesn't show on refresh?
+* compress geojson files <500KB
 
   [div style:`{width: '100%', display: 'flex'}`]
   [D3Destinations data:destinations className:"d3-dest" /]
@@ -79,7 +86,10 @@ Filter the Tableau map for the number of bikers that started at each location. S
 [div style:`{width: '80vw', position: "center"}`]
 [TableauEmbed link:"https://public.tableau.com/views/Book1_16217337142700/Sheet43?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
 [/div]
-
+[br/]
+Note:
+* match background color to rest of page
+* OR ... we could do a tangent story about how COVID changed bike-riding (since we have the data) & I think the different color would make sense + the scroller would be cool
  [var name:"myLocation" value:0 /]
 
  [Scroller className:"hasBackground" currentStep:myLocation]
@@ -139,6 +149,13 @@ which is likely the reason that a large number of rides end at around the 24-hou
 
 [D3DataLoader value:large_duration_data src:"./static/2010-2021_ride_duration_density.csv" load:shouldLoad /]
 
+To do: 
+* reset when fully off screen
+* add 24 hour annotation
+* dropdown? - bins / hours&days?
+* drag? - show 48+ hours?
+* brush? - show ratio member:non
+
 [D3RideDuration 
   data:large_duration_data 
   inView:shouldScale 
@@ -148,6 +165,9 @@ which is likely the reason that a large number of rides end at around the 24-hou
 
 
 ## Data Sources
+
+To do: 
+* formatting??
 
 The Capital Bikeshare system data: https://www.capitalbikeshare.com/system-data
 benbalter GitHub: https://github.com/benbalter/dc-maps
