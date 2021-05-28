@@ -4,8 +4,8 @@ const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
 var turf = require('@turf/rewind');
 const frame_margin = {top:30, right:30, bottom:30, left:30};
-const full_width = 600;
-const full_height = 600;
+const full_width = 400;
+const full_height = 400;
 const width = full_width - frame_margin.left - frame_margin.right;
 const height = full_height -frame_margin.top - frame_margin.bottom;
 const map_zoom = 120;
@@ -14,7 +14,7 @@ const wm = [-77.0353,38.8895];
 
 class D3DCMap extends D3Component {
   initialize(node, props) {
-
+    console.log(props.water)
     const waterways = props.water
 
     const streets = props.streets
@@ -26,8 +26,11 @@ class D3DCMap extends D3Component {
     const waterPathGenerator = d3.geoPath().projection(DCProjection)
 
     const svg = (this.svg = d3.select(node).append('svg'))
-        .attr('width',full_width+padding)
-        .attr('height',full_height)
+        .attr('viewBox',`0 0 ${full_width} ${full_height}`)
+        .style('width','100%')
+        .style('min-width','300px');
+        //.attr('width',full_width+padding)
+        //.attr('height',full_height)
   
     const my_map = svg.append('rect')
         .attr('class','frame')

@@ -58,26 +58,23 @@ Filter the Tableau map for the number of bikers that started at each location. S
 
 
   [data name:"destinations" source:"destinations.csv" /]
-  [data name:"streets" source:"streets.json"/]
-  [data name:"water" source:"waterbodies.json"/]
+  [data name:"streets" source:"streetsmin (1).json"/]
+  [data name:"water" source:"waterbodiesmin (1).json"/]
   
 To do:
-* format width&height as viewBox
-* place bar chart & map on same line (full width?)
-* add drag&anchor feature to map
-* add reset button to map
-* sometimes Union Square marker doesn't show on refresh?
-* compress geojson files <500KB
+* add drag & anchor feature to map
+* add reset button 2 map
+* sometimes Union Square marker does not show on refresh ?
+* Add axis titles to bar chart
+* Add description text
 
-  [div style:`{width: '100%', display: 'flex'}`]
-  [D3Destinations data:destinations className:"d3-dest" /]
-  [D3DCMap streets:streets water:water coords:destinations className:"d3-dest"/]
+  [div className:"bar-and-map"]
+  [D3Destinations data:destinations className:"d3-dest-bar" style:`{width:"65%"}` /]
+  [D3DCMap streets:streets water:water coords:destinations className:"d3-dest-map" style:`{width:"35%"}` /]
   [/div]
   [br/]
 
   //!["Destinations Bar Chart"](./static/images/destinations_bar.png)
-
-
 
 ## Routes 2017
 

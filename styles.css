@@ -73,9 +73,24 @@ body {
   margin-bottom: 0px;
 }
 
-.d3-dest {
+.d3-dest-bar {
   text-align:center;
   padding:20px;
+  min-width:300px;
+}
+
+.d3-dest-map {
+  text-align:center;
+  padding:20px;
+  min-width:300px;
+}
+
+.bar-and-map {
+    width: 80vw; 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 @media all and (max-width: 1000px) {

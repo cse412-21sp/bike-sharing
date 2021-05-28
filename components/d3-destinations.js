@@ -4,7 +4,7 @@ const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
 
 const margin = { top: 25, right: 45, bottom: 25, left: 10 };
-const width = 840;
+const width = 600;
 const height = 300;
 const w = width - (margin.left + margin.right);
 const h = height - (margin.top + margin.bottom);
@@ -19,8 +19,11 @@ class D3Destinations extends D3Component {
 
     // Create our SVG element
     const svg = (this.svg = d3.select(node).append('svg'))
-        .attr('width', width)
-        .attr('height', height + margin.top + margin.bottom);
+        .attr('viewBox',`0 0 ${width} ${height}`)
+        .style('width','100%')
+        .style('min-width','300px');
+        //.attr('width', width)
+        //.attr('height', height + margin.top + margin.bottom);
 
     const xscale = d3.scaleLinear()
         .domain([0,d3.max(props.data, d => d.Count)])
