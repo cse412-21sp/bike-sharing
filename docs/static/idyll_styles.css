@@ -1283,6 +1283,16 @@ h1 {
   font-weight: lighter;
 }
 
+h2 {
+  font-weight: lighter;
+  font-size:xx-large;
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 0
+}
+
 body.backgrounda {
     background-color: yellow;
     /*position: relative;
