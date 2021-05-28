@@ -26,9 +26,8 @@ class D3RideDuration extends D3Component {
         .style('width','100%')
         .style('height','auto')
         .style('padding','20px');
-        //.attr('width', width + margin.left + margin.right)
-        //.attr('height', height + margin.top + margin.bottom)
-        
+    
+    // Loading Screen
     svg.append('rect')
       .attr('width','100%')
       .attr('height','100%')
@@ -42,14 +41,14 @@ class D3RideDuration extends D3Component {
         .attr('x',0)
         .attr('y',0)
         .text('Loading Data...')
-
       }
 
 
     update(props, oldProps) {
       // Use this function to update the visualization.
       // The initial SVG element can be accessed with: this.svg
-      if (oldProps.data.length === 0 && props.data.length !== 0){
+      if (props.data.length !== 0){
+
 
         this.chart_data = this.data_clean(props.data);
 
@@ -62,98 +61,106 @@ class D3RideDuration extends D3Component {
           .scale(linear_yscale)
           .ticks(10);
         
-        this.xscale = d3.scaleLinear()
-          .domain(this.ride_lengths)
-          .range([margin.left, width - margin.right]);
-    
-        this.xaxis = d3.axisBottom()
-          .scale(this.xscale)
-          .tickValues(d3.range(0, 50, 6));
+        // Create the log scale & axis
+        const log_yscale = d3.scaleLog()
+          .domain(this.bikers)
+          .range([height - margin.bottom, margin.top]);
 
-        this.svg.select('rect').remove()
-        this.svg.select('text').remove()
-
-        // Add x-axis
-        this.svg.append('g')
-        .attr('transform', 'translate(0,' + (height - margin.bottom) + ')')
-        .call(this.xaxis)
-        .append('text')
-          .attr('text-anchor','end')
-          .attr('fill','black')
-          .attr('font-size','12px')
-          .attr('font-weight','bold')
-          .attr('x',width-margin.right)
-          .attr('y',30)
-          .text('Rental Duration (hours)');
-
-        // //Add y-axis
-        this.svg.append("g")
-          .attr("transform", 'translate(' + margin.left + ',0)')
-          .call(linear_yaxis)
-          .attr("class","y-axis")
-          .append('text')
-            .attr('transform','translate(70, 10)')
-            .attr('text-anchor','end')
-            .attr('fill','black')
-            .attr('font-size','12px')
-            .attr('font-weight','bold')
-            .attr('x',0)
-            .attr('y',margin.top - 15)
-            .text('Number of Bike Trips');
+        const log_yaxis = d3.axisLeft()
+          .scale(log_yscale)
+          .ticks(10, ',.1s');
 
         // Curve helper function
-        const curveFunc = d3.area()
+        const linear_curveFunc = d3.area()
           .curve(d3.curveBasis)
           .x(d => this.xscale(d.key) )      // Position of both line breaks on the X axis
           .y1(height - margin.bottom)     // Y position of top line breaks
           .y0(d => linear_yscale(d.value) );
 
-
-        // Add the path using this helper function
-        this.svg.append('path')
-          .datum(this.chart_data)
-          .attr('d', curveFunc)
-          .attr("class","my_chart")
-          .attr('stroke', 'black')
-          .attr('fill', '#ec2239');
-
-      }
-
-      if (props.inView && props.data.length !== 0) {
-        
-        // Create the y scale and axis
-        const yscale = d3.scaleLog()
-          .domain(this.bikers)
-          .range([height - margin.bottom, margin.top]);
-
-        const yaxis = d3.axisLeft()
-          .scale(yscale)
-          .ticks(10, ',.1s');
-
-        // Curve helper function
+        // Log curve helper function
         const log_curveFunc = d3.area()
           .curve(d3.curveBasis)
           .x(d => this.xscale(d.key) )      // Position of both line breaks on the X axis
           .y1(height - margin.bottom)     // Y position of top line breaks
-          .y0(d => yscale(d.value) );
+          .y0(d => log_yscale(d.value) );
 
-        this.svg.select(".y-axis")
-        .transition()
-        .duration(2000)
-        .call(yaxis);
+        if (oldProps.data.length === 0) {
 
-        // Add the path using this helper function
-        this.svg.select(".my_chart")
+          this.xscale = d3.scaleLinear()
+            .domain(this.ride_lengths)
+            .range([margin.left, width - margin.right]);
+    
+          this.xaxis = d3.axisBottom()
+            .scale(this.xscale)
+            .tickValues(d3.range(0, 50, 6));
+
+          this.svg.select('rect').remove()
+          this.svg.select('text').remove()
+
+          // Add x-axis
+          this.svg.append('g')
+            .attr('transform', 'translate(0,' + (height - margin.bottom) + ')')
+            .call(this.xaxis)
+            .append('text')
+              .attr('text-anchor','end')
+              .attr('fill','black')
+              .attr('font-size','12px')
+              .attr('font-weight','bold')
+              .attr('x',width-margin.right)
+              .attr('y',30)
+              .text('Rental Duration (hours)');
+
+          // Add y-axis
+          this.svg.append("g")
+            .attr("transform", 'translate(' + margin.left + ',0)')
+            .call(linear_yaxis)
+            .attr("class","y-axis")
+            .append('text')
+              .attr('transform','translate(70, 10)')
+              .attr('text-anchor','end')
+              .attr('fill','black')
+              .attr('font-size','12px')
+              .attr('font-weight','bold')
+              .attr('x',0)
+              .attr('y',margin.top - 15)
+              .text('Number of Bike Trips');
+
+          // Add the path using this helper function
+          this.svg.append('path')
+            .datum(this.chart_data)
+            .attr('d', linear_curveFunc)
+            .attr("class","my_chart")
+            .attr('stroke', 'black')
+            .attr('fill', '#ec2239');
+        }
+
+        if (props.inView) {
+
+          this.svg.select(".y-axis")
           .transition()
           .duration(2000)
-          .attr('d', log_curveFunc);
+          .call(log_yaxis);
+
+          // Add the path using this helper function
+          this.svg.select(".my_chart")
+            .transition()
+            .duration(2000)
+            .attr('d', log_curveFunc);
+        
+        } else {
+
+          this.svg.select(".y-axis")
+            .transition()
+            .call(linear_yaxis);
+
+          // Add the path using this helper function
+          this.svg.select(".my_chart")
+            .transition()
+            .attr('d', linear_curveFunc);
+        }
 
       }
-      // this.svg.selectAll('path')
-      //   .transition()
-      //   .duration(750)
-      //   .call(linear_yaxis);
-      
+
     }
 
     data_clean(new_data) {

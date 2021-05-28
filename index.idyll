@@ -147,7 +147,6 @@ which is likely the reason that a large number of rides end at around the 24-hou
 [D3DataLoader value:large_duration_data src:"./static/2010-2021_ride_duration_density.csv" load:shouldLoad /]
 
 To do: 
-* reset when fully off screen
 * add 24 hour annotation
 * dropdown? - bins / hours&days?
 * drag? - show 48+ hours?
@@ -157,7 +156,7 @@ To do:
   data:large_duration_data 
   inView:shouldScale 
   onEnterView:`shouldScale = true `
-  onExitView:`shouldScale = false `/]
+  onExitViewFully:`shouldScale = false `/]
 
 
 
