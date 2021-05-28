@@ -212,9 +212,13 @@ We can explore the possible reasons for this with the visualization below. Out o
 
 [TableauEmbed link:"https://public.tableau.com/views/cseproject/WeathervsNumberofRiders?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"700"  /]
 
-Furthermore, with the graph below, we may deduce that the increased bike-usage in the summer months may also have to do with the increased tourism in the DC area in the summer. The number of casual (unregistered) bike riders increases by over 5 times from January to June. This may be because tourists who use Capital Bike Share are unlikely to become a registered user.  
+With the graph below, we may deduce that the increased bike-usage in the summer months may also have to do with the increased tourism in the DC area in the summer. The number of casual (unregistered) bike riders increases by over 5 times from January to June. This may be because tourists who use Capital Bike Share are unlikely to become a registered user.  
 
 !["Causal vs Registered By Month"](./static/images/cas_vs_reg.png)
+
+However, we can see below that winter is much more pronounced as a "low-usage" season, than summer is a "high-usage" season.
+
+!["Usage By Season and Hour"](./static/images/usage_by_season_hour.png)
 
 Below we see a couple clear trends. Firstly, that on workdays most people are riding around 8am and 5pm, suggesting that that many use Capital Bike Share for work commutes. On non-workdays, most people are riding between noon and 4pm. 
 
