@@ -93,10 +93,10 @@ To do:
 * Add axis titles to bar chart
 * Add description text
 
-  [div className:"bar-and-map"]
+  [span className:"bar-and-map"]
   [D3Destinations data:destinations className:"d3-dest-bar" style:`{width:"65%"}` /]
   [D3DCMap streets:streets water:water coords:destinations className:"d3-dest-map" style:`{width:"35%"}` /]
-  [/div]
+  [/span]
   [br/]
 
   //!["Destinations Bar Chart"](./static/images/destinations_bar.png)
@@ -237,8 +237,7 @@ which is likely the reason that a large number of rides end at around the 24-hou
 
 [D3DataLoader value:large_duration_data src:"./static/2010-2021_ride_duration_density.csv" load:shouldLoad /]
 
-To do: 
-* add 24 hour annotation
+To do:
 * dropdown? - bins / hours&days?
 * drag? - show 48+ hours?
 * brush? - show ratio member:non

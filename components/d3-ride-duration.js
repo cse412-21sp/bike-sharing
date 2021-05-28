@@ -2,6 +2,7 @@ const React = require('react');
 const D3Component = require('idyll-d3-component');
 const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
+const d3_annotation = require('d3-svg-annotation');
 
 const margin = { top: 25, right: 25, bottom: 35, left: 60 };
 const width = 700;
@@ -69,7 +70,7 @@ class D3RideDuration extends D3Component {
         const log_yaxis = d3.axisLeft()
           .scale(log_yscale)
           .ticks(10, ',.1s');
-
+        
         // Curve helper function
         const linear_curveFunc = d3.area()
           .curve(d3.curveBasis)
@@ -83,6 +84,28 @@ class D3RideDuration extends D3Component {
           .x(d => this.xscale(d.key) )      // Position of both line breaks on the X axis
           .y1(height - margin.bottom)     // Y position of top line breaks
           .y0(d => log_yscale(d.value) );
+
+        const annotations = [
+          {
+            note: { 
+              label: "Most bikers return their rentals by the 24-hour mark",
+              title: "24-Hour Pass",
+              align: "middle"},
+            data: {hour: 24},
+            y: height - margin.bottom,
+            dy: -height+margin.top+margin.bottom+100,
+            connector: { lineType: "vertical" }
+          }
+        ];
+        
+        const makeAnnotations = d3_annotation
+          .annotation()
+          .type(d3_annotation.annotationCallout)
+          .accessors({
+            x: d => this.xscale(d.hour)
+          })
+          .annotations(annotations);
+
 
         if (oldProps.data.length === 0) {
 
@@ -104,7 +127,7 @@ class D3RideDuration extends D3Component {
             .append('text')
               .attr('text-anchor','end')
               .attr('fill','black')
-              .attr('font-size','12px')
+              .attr('font-size','14px')
               .attr('font-weight','bold')
               .attr('x',width-margin.right)
               .attr('y',30)
@@ -116,10 +139,10 @@ class D3RideDuration extends D3Component {
             .call(linear_yaxis)
             .attr("class","y-axis")
             .append('text')
-              .attr('transform','translate(70, 10)')
-              .attr('text-anchor','end')
+              .attr('transform','translate(-30, 5)')
+              .attr('text-anchor','start')
               .attr('fill','black')
-              .attr('font-size','12px')
+              .attr('font-size','14px')
               .attr('font-weight','bold')
               .attr('x',0)
               .attr('y',margin.top - 15)
@@ -132,14 +155,21 @@ class D3RideDuration extends D3Component {
             .attr("class","my_chart")
             .attr('stroke', 'black')
             .attr('fill', '#ec2239');
+
+          
+          this.svg.append('g')
+            .attr("class","my_annotation")
+            .style('font-size','12px')
+            .style('fill','#445464')
+            .call(makeAnnotations);
         }
 
         if (props.inView) {
 
           this.svg.select(".y-axis")
-          .transition()
-          .duration(2000)
-          .call(log_yaxis);
+            .transition()
+            .duration(2000)
+            .call(log_yaxis);
 
           // Add the path using this helper function
           this.svg.select(".my_chart")
@@ -157,6 +187,7 @@ class D3RideDuration extends D3Component {
           this.svg.select(".my_chart")
             .transition()
             .attr('d', linear_curveFunc);
+
         }
 
       }
