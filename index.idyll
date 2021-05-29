@@ -5,25 +5,28 @@
 
 [Header
   fullWidth:true
-  title:"Bike Sharing in DC"
-  subtitle:"exploratory analysis of bike sharing data"
-  author:"Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal"
+  title:"DC Bike Sharing"
+  subtitle:"visual analysis of bike sharing data"
   authorLink: "
   https://courses.cs.washington.edu/courses/cse412/21sp/index.html"
-  color:"#e7e5e9"
-  background: "#445464"
+  color:"#ebebeb"
+  background: "#323131"
+  margin-bottom: 0
    /]
 
-## Background
-
-[Aside]
-[a href:'https://www.capitalbikeshare.com/']
-![Placeholder link:"https://www.capitalbikeshare.com/"](./static/images/cb-logo-2.jpg)
-[/a]
-[/Aside]
+[FullWidth]
+[div style:`{backgroundColor: '#484848', position: 'center'}`]
+[div className: 'idyll-text-container' style:`{backgroundColor: '#484848', color: "#ebebeb"}`]
 
 [br /]
 
+[Aside]
+[a href:'https://www.capitalbikeshare.com/']
+//![Placeholder link:"https://www.capitalbikeshare.com/"](./static/images/cb-logo-2.jpg)
+[/a]
+[/Aside]
+
+## Introduction
 
 Over the last 10 years, bike sharing has become more and more popular in big cities, specifically in Washington DC. 
 Having explored several datasets (2010-2021) from the [a href:'https://www.capitalbikeshare.com/system-data']Capital Bikeshare[/a] program regarding the use of these bikes, 
@@ -32,9 +35,14 @@ decisions can be made on where to best place bikes, program passes to offer, and
 of the bike share system. We have created geographical mappings of the trips that are taken and a number of different plots showing 
 trends related to weather, destinations, and ride duration. Explore the Capital Bikeshare program with our interactive visualizations and make your own discoveries!
 
+[br /]
+[br /]
 
-[br /]
-[br /]
+
+[/div]
+[/div]
+[/FullWidth]
+
 
 [FullWidth]
 [div style:`{backgroundColor: '#323131'}`]
@@ -53,7 +61,7 @@ origin points and destinations within the capital.
 
 [i]Tip: Filter the map for the number of bikers that started at each location. Scroll and zoom to discover more about the geography of DC.[/i]
 
-[div style:`{width: '80vw', position: "center"}`]
+[div style:`{width: '100%', position: "center"}`]
 [TableauEmbed link:"https://public.tableau.com/views/2017BikeRoutes/Sheet12?:language=en&:display_count=y&publish=yes&:origin=viz_share_link" width:"100%" height:"800"/]
 [/div]
 
@@ -74,15 +82,19 @@ origin points and destinations within the capital.
 
 // !["Starting Point Bar Chart"](./static/images/start_bar.png)
 
-[br /]
-[br /]
-
 [data name:"destinations" source:"destinations.csv" /]
 [data name:"streets" source:"streetsmin (1).json"/]
 [data name:"water" source:"waterbodiesmin (1).json"/]
 
-## Where Are People Going?
-### A Closer Look At The Popular Destinations
+[FullWidth]
+[div style:`{backgroundColor: '#f6d897', position: "center"}`]
+[div className: 'idyll-text-container' style:`{backgroundColor: '#f6d897', color: "#101010"}`]
+
+[br /]
+
+###### Where Are People Going? 
+
+#### taking a closer look at the popular destinations
 
 [br /]
 
@@ -101,6 +113,7 @@ To do:
 
 [br /]
 
+[div style:`{width: "60%", position: "center"}`]
 ### Union Station
 
 Union Station is a superbly restored historic, mixed-use, intermodal transportation and shopping 
@@ -129,8 +142,16 @@ the grand structures honoring our most storied leaders.
 Located right by the Washington Monument. The Washington monument was Built to honor George Washington, 
 the United States' first president. The 555-foot marble obelisk towers over Washington, D.C and is another must-see attraction during your visit.
 
+[/div]
+
+
 [br /]
 [br /]
+
+[/div]
+[/div]
+[/FullWidth]
+
 
 [FullWidth]
 [div style:`{backgroundColor: '#323131'}`]
@@ -162,37 +183,6 @@ Note:
 [/div]
 [/div]
 [/FullWidth]
-
-
- [var name:"myLocation" value:0 /]
-
- [Scroller className:"hasBackground" currentStep:myLocation]
-
-  [Graphic className:"d3-component-container"]
-    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
-  [/Graphic]
-
-   [Step]
-
-    Information in the scroller is mostly useless right now. I'm thinking about putting in a different 
-    location or maybe getting tid of it all together. But lets leave it here for now in case we want to use it for something
-    and its already set up!
-    ## A Closer Look at Routes
-
-    ### Top 3 Origin Points
-    !["top 3 starting points"](./static/images/routes3.jpg)
-   [/Step]
-
-   [Step]
-     ## Top 5 Destination Points
-     !["top 5 destinations"](./static/images/top5_destinations.png)
-   [/Step]
-
-   [Step]
-     !["Stacked Bar Chart"](./static/images/routes_2017_most_popular.png)
-   [/Step]
-
- [/Scroller]
 
 // [ObservableEmbed link:"https://observablehq.com/embed/@domnina/2017-routes-sunburst?cells=chart" width:"100%" height:"1039" /]
 
@@ -240,11 +230,11 @@ To do:
 * drag? - show 48+ hours?
 * brush? - show ratio member:non
 
-[D3RideDuration 
-  data:large_duration_data 
-  inView:shouldScale 
-  onEnterView:`shouldScale = true `
-  onExitViewFully:`shouldScale = false `/]
+\\[D3RideDuration 
+\\data:large_duration_data 
+\\inView:shouldScale 
+\\onEnterView:`shouldScale = true `
+\\onExitViewFully:`shouldScale = false `
 
 
 
@@ -255,3 +245,35 @@ To do:
 
 The Capital Bikeshare system data: https://www.capitalbikeshare.com/system-data
 benbalter GitHub: https://github.com/benbalter/dc-maps
+author:"Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal"
+
+
+ [var name:"myLocation" value:0 /]
+
+ [Scroller className:"hasBackground" currentStep:myLocation]
+
+  [Graphic className:"d3-component-container"]
+    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
+  [/Graphic]
+
+   [Step]
+
+    Information in the scroller is mostly useless right now. I'm thinking about putting in a different 
+    location or maybe getting tid of it all together. But lets leave it here for now in case we want to use it for something
+    and its already set up!
+    ## A Closer Look at Routes
+
+    ### Top 3 Origin Points
+    !["top 3 starting points"](./static/images/routes3.jpg)
+   [/Step]
+
+   [Step]
+     ## Top 5 Destination Points
+     !["top 5 destinations"](./static/images/top5_destinations.png)
+   [/Step]
+
+   [Step]
+     !["Stacked Bar Chart"](./static/images/routes_2017_most_popular.png)
+   [/Step]
+
+ [/Scroller]

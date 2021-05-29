@@ -1,61 +1,82 @@
 
 /* title*/
-h1 {
-  padding-bottom: 0.3em;
-  font-size: 2em;
-  font-weight: lighter;
+.article-header h1 {
+  padding-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #ebebeb;
+}
+
+/* link color */
+a {
+  color: #e4a46c;
+  text-decoration: underline;
 }
 
 h2 {
-  font-weight: lighter;
+  /*font-weight: lighter;*/
   font-size:xx-large;
   margin-bottom: 0;
+  color: #f6d897;
 }
+
+h4 {
+  margin-top: 0;
+}
+
+/* special h2 for yellow background */
+h6 {
+  /*font-weight: lighter;*/
+  font-size:xx-large;
+  margin-bottom: 0;
+  color: rgb(27, 27, 27);;
+}
+
 
 h3 {
   margin-top: 0
 }
 
-body.backgrounda {
-    background-color: yellow;
-    /*position: relative;
-    padding-inline-end: 50%;*/
-    max-width: 1000;
-    /*left: -10px;
-    top: -10px;
-    right: 600px;*/
+.idyll-scroll {
+  margin-top: 0;
+}
+
+.article-header h2 {
+  font-size: 1em;
+  margin-top: 0px;
+  margin-bottom: 2em;
+  color: #ebebeb;
 }
 
 .article-header a {
   color: white;
   text-decoration: underline;
+  margin-bottom: 0px;
 }
 
 h2.dek {
   border-bottom: none;
   padding-bottom: 0;
-  margin-top: 12px;
+  margin-top: 0px;
 }
 
 .article-header {
-  text-align: left;
-  margin-bottom: 45px;
-  padding-left: 10%;
+  text-align: center;
+  margin-bottom: -30px;
+  padding-left: 0;
 }
 
 
-img {
-  margin: auto;
-  display: block;
- }
-
 .idyll-text-container {
-  max-width: 60vw;
-  margin-top: 0;
+  max-width: 80vw;
   margin-right: 10%;
-  margin-bottom: 0;
   margin-left: 10%;
   background: white;
+  margin-top: 0px;
+  margin-bottom: 0;
 }
 
 .aside {
@@ -69,10 +90,14 @@ body {
   background-color: white;
   color: rgb(27, 27, 27);
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   word-wrap: break-word;
   text-align: justify;
+  font-weight: lighter;
+  margin-top:0;
+  padding-top:0;
+  margin:0;
 }
 
 .d3-component svg {
