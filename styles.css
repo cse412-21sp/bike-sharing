@@ -2,7 +2,7 @@
 /* title*/
 .article-header h1 {
   padding-bottom: 0em;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -18,7 +18,7 @@ a {
 
 h2 {
   /*font-weight: lighter;*/
-  font-size:xx-large;
+  font-size:x-large;
   margin-bottom: 0;
   color: #f6d897;
 }
@@ -90,7 +90,7 @@ body {
   background-color: white;
   color: rgb(27, 27, 27);
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
   text-align: justify;

@@ -230,6 +230,9 @@ To do:
 * drag? - show 48+ hours?
 * brush? - show ratio member:non
 
+I commented out your visualization because the annotation component was missing and so it woudnt load.
+Please push that component to github and uncomment! This vis is awesome!
+
 \\[D3RideDuration 
 \\data:large_duration_data 
 \\inView:shouldScale 
