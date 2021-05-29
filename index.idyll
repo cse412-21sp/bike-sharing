@@ -45,8 +45,8 @@ trends related to weather, destinations, and ride duration. Explore the Capital 
 
 
 [FullWidth]
-[div style:`{backgroundColor: '#323131'}`]
-[div className: 'idyll-text-container' style:`{backgroundColor: '#323131', color: "#ebebeb"}`]
+[div style:`{backgroundColor: '#333333'}`]
+[div className: 'idyll-text-container' style:`{backgroundColor: '#333333', color: "#ebebeb"}`]
 
 [br /]
 [br /]
@@ -61,24 +61,28 @@ origin points and destinations within the capital.
 
 [i]Tip: Filter the map for the number of bikers that started at each location. Scroll and zoom to discover more about the geography of DC.[/i]
 
-[div style:`{width: '100%', position: "center"}`]
-[TableauEmbed link:"https://public.tableau.com/views/2017BikeRoutes/Sheet12?:language=en&:display_count=y&publish=yes&:origin=viz_share_link" width:"100%" height:"800"/]
-[/div]
-
-[br /]
-
-[div style:`{width: '80vw', position: "center"}`]
-[TableauEmbed link:"https://public.tableau.com/views/DistinationsofBikeRides/Sheet122?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
-[/div]
-
-[br /]
-[br /]
-[br /]
-
-
 [/div]
 [/div]
 [/FullWidth]
+
+
+[FullWidth]
+[div style:`{backgroundColor: '#333333', paddingLeft: "2.5vw", color: "white"}`]
+
+To Do:
+
+- maybe format better
+- decide on a zoom and make it the same for both (currently the left resizes and the right doesnt upon filtering)
+
+[TableauEmbed link:"https://public.tableau.com/views/Dashboard2_16223188422430/Dashboard32?:language=en-US&:display_count=n&:origin=viz_share_link" width:"100%" height:"900"/]
+
+
+[br /]
+[br /]
+
+[/div]
+[/FullWidth]
+
 
 // !["Starting Point Bar Chart"](./static/images/start_bar.png)
 
@@ -248,35 +252,7 @@ To do:
 
 The Capital Bikeshare system data: https://www.capitalbikeshare.com/system-data
 benbalter GitHub: https://github.com/benbalter/dc-maps
-author:"Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal"
+
+Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal
 
 
- [var name:"myLocation" value:0 /]
-
- [Scroller className:"hasBackground" currentStep:myLocation]
-
-  [Graphic className:"d3-component-container"]
-    [CustomD3Component className:"d3-component" state:`myLocation + 1` /]
-  [/Graphic]
-
-   [Step]
-
-    Information in the scroller is mostly useless right now. I'm thinking about putting in a different 
-    location or maybe getting tid of it all together. But lets leave it here for now in case we want to use it for something
-    and its already set up!
-    ## A Closer Look at Routes
-
-    ### Top 3 Origin Points
-    !["top 3 starting points"](./static/images/routes3.jpg)
-   [/Step]
-
-   [Step]
-     ## Top 5 Destination Points
-     !["top 5 destinations"](./static/images/top5_destinations.png)
-   [/Step]
-
-   [Step]
-     !["Stacked Bar Chart"](./static/images/routes_2017_most_popular.png)
-   [/Step]
-
- [/Scroller]

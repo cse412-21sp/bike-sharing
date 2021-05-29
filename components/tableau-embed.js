@@ -8,6 +8,8 @@ class TableauEmbed extends React.Component {
         src={this.props.link + ':showVizHome=no&:embed=true'}
         width={this.props.width}
         height={this.props.height}
+        style={{border:"none"}}
+        seamless={"seamless"}
       />
     );
   }
