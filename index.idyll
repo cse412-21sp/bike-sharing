@@ -71,7 +71,7 @@ origin points and destinations within the capital.
 
 To Do:
 
-- maybe format better
+- format 
 - decide on a zoom and make it the same for both (currently the left resizes and the right doesnt upon filtering)
 
 [TableauEmbed link:"https://public.tableau.com/views/Dashboard2_16223188422430/Dashboard32?:language=en-US&:display_count=n&:origin=viz_share_link" width:"100%" height:"900"/]
