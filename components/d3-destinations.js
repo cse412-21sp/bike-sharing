@@ -3,7 +3,7 @@ const D3Component = require('idyll-d3-component');
 const d3 = require('d3');
 const d3scale = require('d3-scale-chromatic');
 
-const margin = { top: 25, right: 45, bottom: 25, left: 10 };
+const margin = { top: 35, right: 45, bottom: 35, left: 10 };
 const width = 600;
 const height = 300;
 const w = width - (margin.left + margin.right);
@@ -74,11 +74,31 @@ class D3Destinations extends D3Component {
 
     svg.append('g')
         .attr('transform','translate('+margin.left+','+(height - margin.bottom)+')')
-        .call(xaxis);
+        .call(xaxis)
+        .append('text')
+              .attr('text-anchor','middle')
+              .attr('fill','black')
+              .attr('font-size','14px')
+              .attr('font-weight','bold')
+              .attr('x',(width/2)-margin.right)
+              .attr('y',35)
+              .text('Number of Bikers');
     
     svg.append('g')
         .attr('transform','translate('+margin.left+',0)')
-        .call(customYAxis);
+        .call(customYAxis)
+        .append('text')
+            .attr('transform','translate(-5, 0)')
+            .attr('text-anchor','start')
+            .attr('fill','black')
+            .attr('font-size','24px')
+            .attr('x',0)
+            .attr('y',margin.top - 15)
+            .text('Top 10 Destinations');
+
+
+
+
         //.call(g => g.selectAll('.tick text'))
             //.attr('font-size','13px');
 

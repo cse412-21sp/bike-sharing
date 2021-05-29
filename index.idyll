@@ -81,7 +81,7 @@ origin points and destinations within the capital.
 [data name:"streets" source:"streetsmin (1).json"/]
 [data name:"water" source:"waterbodiesmin (1).json"/]
 
-## Where Are People Riding To?
+## Where Are People Going?
 ### A Closer Look At The Popular Destinations
 
 [br /]
@@ -90,8 +90,6 @@ To do:
 * add drag & anchor feature to map
 * add reset button 2 map
 * sometimes Union Square marker does not show on refresh ?
-* Add axis titles to bar chart
-* Add description text
 
   [span className:"bar-and-map"]
   [D3Destinations data:destinations className:"d3-dest-bar" style:`{width:"65%"}` /]
