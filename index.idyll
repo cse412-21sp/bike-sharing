@@ -61,14 +61,15 @@ origin points and destinations within the capital.
 
 [i]Tip: Filter the map for the number of bikers that started at each location. Scroll and zoom to discover more about the geography of DC.[/i]
 
-I havent figured out how to make it be responsive
+
+I'm really struggling to make it responsive. The wierdest things happen.
+
 
 [/div]
 
 [div style:`{width: '100%', paddingLeft: "10vw"}`]
 [TableauEmbed link:"https://public.tableau.com/views/Dashboard2_16223188422430/Dashboard32?:language=en-US&:display_count=n&:origin=viz_share_link" width: "100%" max-width: "100%"  height:"800" /]
 [/div]
-
 
 
 [br /]
@@ -154,20 +155,25 @@ the United States' first president. The 555-foot marble obelisk towers over Wash
 
 
 [FullWidth]
-[div style:`{backgroundColor: '#323131'}`]
-[div className: 'idyll-text-container' style:`{backgroundColor: '#323131', color: "#ebebeb"}`]
+[div style:`{backgroundColor: '#333333'}`]
+[div className: 'idyll-text-container' style:`{backgroundColor: '#333333', color: "#ebebeb"}`]
 
 [br /]
 [br /]
 
-## Most Popular Routes (Destinations)
 
-[div style:`{width: '80vw', position: "center"}`]
-[TableauEmbed link:"https://public.tableau.com/views/Book1_16217337142700/Sheet43?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"800"  /]
+## Most Popular Routes 
+
+To get a better picture of the bike rides, we explored the relationships between the start and end locations. 
+The following map shows the "routes" taken, and upon hovering reveal how many people took this route in 2017.
+
+
+[div style:`{width: '100vw', position: "center"}`]
+[TableauEmbed link:"https://public.tableau.com/views/RoutesDashboard_16224076977410/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link"  width:"100%" height:"850"  /]
 [/div]
 
-[i]Tip: Filter the  map by the number of rides taken to reach all destinations, pick specific destinations you would like to explore, 
-or brush over areas using the menu in the top-left corner of the map . [/i]
+
+[i]Tip: Filter the  map by the number of rides taken to reach all destinations or pick specific destinations you would like to explore. [/i]
 
 [br/]
 [br/]
@@ -185,36 +191,78 @@ or brush over areas using the menu in the top-left corner of the map . [/i]
 [br /]
 
 ###### When are People Riding the Most?
-### exploring ride counts based on month, day, hour and weather statistics 
+#### exploring ride counts based on month, hour and weather statistics 
+
+In this part of our analysis we take a closer look at what effects bike usage
+
+### Months
 
 In the graph below, we can see that most people ride during the summer months, while the winter months get significantly less bike usage.
-This pattern is most likely attributed to the high number of tourists visiting DC in the summer.  
+This pattern is most likely attributed to the high number of tourists visiting DC in the summer. 
 
-[div style:`{position: "center", width: "80%", marginLeft: "10%"}`]
+[div style:`{position: "center", width: "80%", marginLeft: "10%"}`] 
+[br /]
 !["Monthly"](./static/images/yellow_months.png)
+[br /]
 [/div]
 
-We can explore the possible reasons for this with the visualization below. Out of the three weather data types we have - temperature, wind speed, and humidity - temperature is the only one that has a clear correlation with bike useage. 
+### Weather
 
-[TableauEmbed link:"https://public.tableau.com/views/cseproject/WeathervsNumberofRiders?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"700"  /]
+After exploring the effect of 3 different weather variables on our ride counts, we have found that
+temperature has the greatest correalation with bike riding. In the following visualization, we can see that
+there is a relataively strong correaltion between temperature and bike counts. We also see that roughly 40% of the variation
+in bike counts is explained by changes in temperature, while the other 60% are influenced by other factors.
 
-With the graph below, we may deduce that the increased bike-usage in the summer months may also have to do with the increased tourism in the DC area in the summer. The number of casual (unregistered) bike riders increases by over 5 times from January to June. This may be because tourists who use Capital Bike Share are unlikely to become a registered user.  
+[div style:`{position: "center", width: "80%", marginLeft: "10%"}`] 
+[br /]
+!["Temperature"](./static/images/temp.png)
+[br /]
+[/div]
 
-!["Causal vs Registered By Month"](./static/images/cas_vs_reg.png)
+### Time of Day
 
-However, we can see below that winter is much more pronounced as a "low-usage" season, than summer is a "high-usage" season.
+Next, we explore how the time of day effects bike usage. In the following visualziation, we can see
+that riding peaks around 8 am and 5 pm. Thus, we can deduce that many people ride to and from work on these bikes!
+There is also a slight increase around lunchtime, which further supports this claim, as workers are likely using these
+bikes to go out for lunch.
 
-!["Usage By Season and Hour"](./static/images/usage_by_season_hour.png)
+[div style:`{position: "center", width: "80%", marginLeft: "10%"}`] 
+[br /]
+!["Usage By Hour"](./static/images/hour.png)
+[br /]
+[/div]
 
-Below we see a couple clear trends. Firstly, that on workdays most people are riding around 8am and 5pm, suggesting that that many use Capital Bike Share for work commutes. On non-workdays, most people are riding between noon and 4pm. 
 
-!["Causal vs Registered By Month"](./static/images/hour_usage_work.png)
+[br /]
 
+
+// [TableauEmbed link:"https://public.tableau.com/views/cseproject/WeathervsNumberofRiders?:language=en&:display_count=y&publish=yes&:origin=viz_share_link"  width:"100%" height:"700"  /]
+
+//With the graph below, we may deduce that the increased bike-usage in the summer months may also have to do with the increased tourism in the DC area in the summer. The number of casual (unregistered) bike riders increases by over 5 times from January to June. This may be because tourists who use Capital Bike Share are unlikely to become a registered user.  
+
+//!["Causal vs Registered By Month"](./static/images/cas_vs_reg.png)
+
+//However, we can see below that winter is much more pronounced as a "low-usage" season, than summer is a "high-usage" season.
+
+//!["Usage By Season and Hour"](./static/images/usage_by_season_hour.png)
+
+//Below we see a couple clear trends. Firstly, that on workdays most people are riding around 8am and 5pm, suggesting that that many use Capital Bike Share for work commutes. On non-workdays, most people are riding between noon and 4pm. 
+
+//!["Causal vs Registered By Month"](./static/images/hour_usage_work.png)
+
+[br /]
+[br /]
 
 [/div]
 [/div]
 [/FullWidth]
 
+[FullWidth]
+[div style:`{backgroundColor: '#333333'}`]
+[div className: 'idyll-text-container' style:`{backgroundColor: '#333333', color: "#ebebeb"}`]
+
+[br /]
+[br /]
 ## How Long Should You Rent Your Bike For?
 ### exploring the length of rentals
 This visualization shows the length of time that bikes have been rented throughout the history of the program. Most rides (over 10 Million) have been shorter than an hour. 
@@ -243,15 +291,32 @@ Please push that component to github and uncomment! This vis is awesome!
 \\onExitViewFully:`shouldScale = false `
 
 
+[br /]
+[br /]
+[/div]
+[/div]
+[/FullWidth]
 
-## Data Sources
+[FullWidth]
+[div style:`{backgroundColor: '#f6d897', position: "center"}`]
+[div className: 'idyll-text-container' style:`{backgroundColor: '#f6d897', color: "#101010"}`]
 
-To do: 
-* formatting??
+[br /]
+[br /]
 
-The Capital Bikeshare system data: https://www.capitalbikeshare.com/system-data
-benbalter GitHub: https://github.com/benbalter/dc-maps
+###### Data Sources
 
-Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal
+Creators: Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal
+
+The Capital Bikeshare System Data: https://www.capitalbikeshare.com/system-data
+Benbalter GitHub: https://github.com/benbalter/dc-maps
 
 
+[br /]
+[br /]
+[br /]
+[br /]
+
+[/div]
+[/div]
+[/FullWidth]
