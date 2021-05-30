@@ -1307,9 +1307,9 @@ h4 {
 /* special h2 for yellow background */
 h6 {
   /*font-weight: lighter;*/
-  font-size:xx-large;
+  font-size:x-large;
   margin-bottom: 0;
-  color: rgb(27, 27, 27);;
+  color: #323131;
 }
 
 
