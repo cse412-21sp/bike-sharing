@@ -22,7 +22,7 @@
 
 [Aside]
 [a href:'https://www.capitalbikeshare.com/']
-//![Placeholder link:"https://www.capitalbikeshare.com/"](./static/images/cb-logo-2.jpg)
+//![Placeholder link:"https://www.capitalbikeshare.com/"](./static/images/cb-logo-clear.jpg)
 [/a]
 [/Aside]
 
@@ -62,12 +62,9 @@ origin points and destinations within the capital.
 [i]Tip: Filter the map for the number of bikers that started at each location. Scroll and zoom to discover more about the geography of DC.[/i]
 
 
-I'm really struggling to make it responsive. The wierdest things happen.
-
-
 [/div]
 
-[div style:`{width: '100%', paddingLeft: "10vw"}`]
+[div style:`{width: '100%', paddingLeft: "10vw", paddingRight:"7vw"}`]
 [TableauEmbed link:"https://public.tableau.com/views/Dashboard2_16223188422430/Dashboard32?:language=en-US&:display_count=n&:origin=viz_share_link" width: "100%" max-width: "100%"  height:"800" /]
 [/div]
 
@@ -114,7 +111,7 @@ To do:
 
 [br /]
 
-[div style:`{width: "60%", position: "center"}`]
+[div style:`{width: "100%", position: "center"}`]
 ### Union Station
 
 Union Station is a superbly restored historic, mixed-use, intermodal transportation and shopping 
@@ -168,7 +165,7 @@ To get a better picture of the bike rides, we explored the relationships between
 The following map shows the "routes" taken, and upon hovering reveal how many people took this route in 2017.
 
 
-[div style:`{width: '100vw', position: "center"}`]
+[div style:`{width: '100%', position: "center"}`]
 [TableauEmbed link:"https://public.tableau.com/views/RoutesDashboard_16224076977410/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link"  width:"100%" height:"850"  /]
 [/div]
 
@@ -281,17 +278,11 @@ To do:
 * drag? - show 48+ hours?
 * brush? - show ratio member:non
 
-I commented out your visualization because the annotation component was missing and so it woudnt load.
-Please push that component to github and uncomment! This vis is awesome!
-
-\\[D3RideDuration 
-\\data:large_duration_data 
-\\inView:shouldScale 
-\\onEnterView:`shouldScale = true `
-\\onExitViewFully:`shouldScale = false `
-
-
-[br /]
+[D3RideDuration 
+data:large_duration_data 
+inView:shouldScale 
+onEnterView:`shouldScale = true `
+onExitViewFully:`shouldScale = false ` /]
 [br /]
 [/div]
 [/div]

@@ -24,9 +24,10 @@ class D3RideDuration extends D3Component {
     // Create our SVG element
     const svg = (this.svg = d3.select(node).append('svg'))
         .attr('viewBox',`0 0 ${width} ${height}`)
-        .style('width','100%')
+        .style('width','80%')
         .style('height','auto')
-        .style('padding','20px');
+        .style('padding','20px')
+        .style('margin','0 10%');
     
     // Loading Screen
     svg.append('rect')
@@ -94,7 +95,8 @@ class D3RideDuration extends D3Component {
             data: {hour: 24},
             y: height - margin.bottom,
             dy: -height+margin.top+margin.bottom+100,
-            connector: { lineType: "vertical" }
+            connector: { lineType: "vertical" },
+            color: 'white'
           }
         ];
         
@@ -126,7 +128,7 @@ class D3RideDuration extends D3Component {
             .call(this.xaxis)
             .append('text')
               .attr('text-anchor','end')
-              .attr('fill','black')
+              .attr('fill','white')
               .attr('font-size','14px')
               .attr('font-weight','bold')
               .attr('x',width-margin.right)
@@ -141,7 +143,7 @@ class D3RideDuration extends D3Component {
             .append('text')
               .attr('transform','translate(-30, 5)')
               .attr('text-anchor','start')
-              .attr('fill','black')
+              .attr('fill','white')
               .attr('font-size','14px')
               .attr('font-weight','bold')
               .attr('x',0)
@@ -153,14 +155,13 @@ class D3RideDuration extends D3Component {
             .datum(this.chart_data)
             .attr('d', linear_curveFunc)
             .attr("class","my_chart")
-            .attr('stroke', 'black')
+            .attr('stroke', 'white')
             .attr('fill', '#ec2239');
 
           
           this.svg.append('g')
             .attr("class","my_annotation")
             .style('font-size','12px')
-            .style('fill','#445464')
             .call(makeAnnotations);
         }
 

@@ -1321,6 +1321,11 @@ h3 {
   margin-top: 0;
 }
 
+.idyll-root {
+  padding: 0;
+  margin-bottom: 0;
+}
+
 .article-header h2 {
   font-size: 1em;
   margin-top: 0px;
@@ -1403,6 +1408,14 @@ body {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.fullWidth {
+  overflow: hidden;
+}
+
+img {
+  background-color: transparent;
 }
 
 @media all and (max-width: 1000px) {

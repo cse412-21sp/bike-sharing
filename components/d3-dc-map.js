@@ -29,8 +29,6 @@ class D3DCMap extends D3Component {
         .attr('viewBox',`0 0 ${full_width} ${full_height}`)
         .style('width','100%')
         .style('min-width','300px');
-        //.attr('width',full_width+padding)
-        //.attr('height',full_height)
   
     const my_map = svg.append('rect')
         .attr('class','frame')
@@ -91,7 +89,7 @@ class D3DCMap extends D3Component {
         .attr("class", function(d,i){return "marker marker"+i})
         .attr('d', "M0,0l-8.8-17.7C-12.1-24.3-7.4-32,0-32h0c7.4,0,12.1,7.7,8.8,14.3L0,0z")
         .attr("transform", d => "translate(" + ((DCProjection([d.Longitude,d.Latitude])[0]) + frame_margin.left) +',' + DCProjection([d.Longitude,d.Latitude])[1]+")")
-        .attr('fill','#fab95b')
+        .attr('fill','#4f8cc2')
         .attr('stroke','black')
         .attr('stroke-width','1')
         .style('opacity',0)

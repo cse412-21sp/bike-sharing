@@ -22,8 +22,6 @@ class D3Destinations extends D3Component {
         .attr('viewBox',`0 0 ${width} ${height}`)
         .style('width','100%')
         .style('min-width','300px');
-        //.attr('width', width)
-        //.attr('height', height + margin.top + margin.bottom);
 
     const xscale = d3.scaleLinear()
         .domain([0,d3.max(props.data, d => d.Count)])
@@ -66,7 +64,7 @@ class D3Destinations extends D3Component {
             .attr('y', d => yscale(d.destination_name))
             .attr('width', d => xscale(d.Count))
             .attr('height', yscale.bandwidth())
-            .attr('fill','#fab95b')
+            .attr('fill','#3e709c')
             .on('mouseover', function(d,i){highlight(i.reference);})
             .on('mouseout', function(d,i){clearHighlight(i.reference);})
             .on('click', function(d,i){fullSelect(i.reference);});
@@ -105,7 +103,7 @@ class D3Destinations extends D3Component {
 
     function customYAxis(g) {
         g.call(yaxis);
-        g.selectAll('.tick text').attr('x',5).attr('font-size','13px').attr('text-anchor','start');
+        g.selectAll('.tick text').attr('x',5).attr('font-size','13px').attr('text-anchor','start').attr('fill','#d4d4d4');
         g.selectAll(".tick line").remove();
     }
 
