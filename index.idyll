@@ -15,8 +15,7 @@
    /]
 
 [FullWidth]
-[div style:`{backgroundColor: '#484848', position: 'center'}`]
-[div className: 'idyll-text-container' style:`{backgroundColor: '#484848', color: "#ebebeb"}`]
+[div className:"idyll-text-container-light"]
 
 [br /]
 
@@ -39,7 +38,6 @@ trends related to weather, destinations, and ride duration. Explore the Capital 
 [br /]
 
 
-[/div]
 [/div]
 [/FullWidth]
 
@@ -289,8 +287,7 @@ onExitViewFully:`shouldScale = false ` /]
 [/FullWidth]
 
 [FullWidth]
-[div style:`{backgroundColor: '#f6d897', position: "center"}`]
-[div className: 'idyll-text-container' style:`{backgroundColor: '#f6d897', color: "#101010"}`]
+[div className:"idyll-text-container-light" id:"end"]
 
 [br /]
 [br /]
@@ -300,14 +297,9 @@ onExitViewFully:`shouldScale = false ` /]
 Creators: Nadia Domnina, Nathaniel Marcuson, Olivia Hurd, Frank Wu, Ashina Agarwal
 
 The Capital Bikeshare System Data: https://www.capitalbikeshare.com/system-data
-Benbalter GitHub: https://github.com/benbalter/dc-maps
+[br/]benbalter/dc-maps on GitHub: https://github.com/benbalter/dc-maps
 
 
-[br /]
-[br /]
-[br /]
-[br /]
 
-[/div]
 [/div]
 [/FullWidth]
