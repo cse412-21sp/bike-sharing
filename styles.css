@@ -7,7 +7,6 @@
   text-transform: uppercase;
   margin-bottom: 0;
   margin-top: 0;
-  color: #ebebeb;
 }
 
 /* link color */
@@ -91,6 +90,10 @@ h2.dek {
   margin-top: 0px;
   margin-bottom: 0;
   color: #101010;
+}
+
+#lightest {
+  background: #f0e0c0;
 }
 
 .idyll-text-container-light a {

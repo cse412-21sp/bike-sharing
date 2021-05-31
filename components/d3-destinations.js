@@ -105,11 +105,8 @@ class D3Destinations extends D3Component {
             .attr('font-size','13px')
             .attr('text-anchor','start')
             .attr('fill','#d4d4d4')
-            .attr('cursor','default')
-            .attr('class',g)
-            .on('mouseover', function(d,i){highlight(i.reference);})
-            .on('mouseout', function(d,i){clearHighlight(i.reference);})
-            .on('click', function(d,i){fullSelect(i.reference);});
+            .attr('pointer-events','none')
+            .attr('class',g);
         g.selectAll(".tick line").remove();
     }
 

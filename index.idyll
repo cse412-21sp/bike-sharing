@@ -15,7 +15,7 @@
    /]
 
 [FullWidth]
-[div className:"idyll-text-container-light"]
+[div className:"idyll-text-container-light" id:"lightest"]
 
 [br /]
 
@@ -93,11 +93,6 @@ origin points and destinations within the capital.
 #### taking a closer look at the popular destinations
 
 [br /]
-
-To do:
-* add drag & anchor feature to map
-* add reset button 2 map
-* sometimes Union Square marker does not show on refresh ?
 
   [span className:"bar-and-map"]
   [D3Destinations data:destinations className:"d3-dest-bar" style:`{width:"65%"}` /]
@@ -258,7 +253,7 @@ bikes to go out for lunch.
 
 [br /]
 [br /]
-## How Long Should You Rent Your Bike For?
+## How Long Are Bikers Renting?
 ### exploring the length of rentals
 This visualization shows the length of time that bikes have been rented throughout the history of the program. Most rides (over 10 Million) have been shorter than an hour. 
 However, there are also a large number of bikers who keep their bikes rented for 24 hours. 
@@ -270,11 +265,6 @@ which is likely the reason that a large number of rides end at around the 24-hou
 [var name:"shouldScale" value:`false` /]
 
 [D3DataLoader value:large_duration_data src:"./static/2010-2021_ride_duration_density.csv" load:shouldLoad /]
-
-To do:
-* dropdown? - bins / hours&days?
-* drag? - show 48+ hours?
-* brush? - show ratio member:non
 
 [D3RideDuration 
 data:large_duration_data 
